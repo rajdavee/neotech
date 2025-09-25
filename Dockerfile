@@ -10,11 +10,10 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy all source files including public directory
-COPY . .
-
-# Ensure public directory exists with required files
-RUN ls -la public/
+# Copy source files
+COPY src/ ./src/
+COPY public/ ./public/
+COPY tsconfig.json ./
 
 # Build the application
 RUN npm run build
