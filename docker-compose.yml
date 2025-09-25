@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  neotaq-website:
+    build: .
+    ports:
+      - "3429:3429"
+    container_name: neotaq-website
+    restart: unless-stopped
