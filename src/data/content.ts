@@ -1,4 +1,4 @@
-// Content Strategy for Neotaq - Based on NeoSOFT structure
+// Content Strategy for Neoteq - Based on NeoSOFT structure
 export interface Service {
   id: string;
   name: string;
@@ -196,58 +196,104 @@ export const services: Service[] = [
 
 export const industries: Industry[] = [
   {
-    id: "financial-services",
-    name: "Financial Services",
-    description: "Transforming financial services with secure, compliant, and innovative technology solutions.",
+    id: "healthtech",
+    name: "HealthTech",
+    description: "Revolutionizing healthcare delivery with cutting-edge digital solutions, telemedicine platforms, and AI-powered diagnostic tools.",
     challenges: [
-      "Regulatory compliance",
-      "Legacy system modernization",
-      "Security and fraud prevention",
-      "Customer experience enhancement"
+      "HIPAA compliance and data security",
+      "Interoperability between systems",
+      "Patient data privacy",
+      "Telemedicine adoption barriers"
     ],
     solutions: [
-      "Digital banking platforms",
-      "Payment processing systems",
-      "Risk management solutions",
-      "Regulatory compliance tools"
+      "Telemedicine & Remote Patient Monitoring",
+      "AI-Powered Diagnostic Systems",
+      "Electronic Health Records (EHR)",
+      "Healthcare Analytics & Insights",
+      "Patient Engagement Platforms",
+      "Medical Device Integration"
     ],
-    icon: "🏦"
+    icon: "🏥"
   },
   {
-    id: "ecommerce-retail",
-    name: "eCommerce & Retail",
-    description: "Powering retail transformation with omnichannel experiences and intelligent commerce solutions.",
+    id: "fintech",
+    name: "FinTech",
+    description: "Transforming financial services with secure, scalable solutions including digital banking, payment processing, and blockchain applications.",
     challenges: [
-      "Omnichannel integration",
-      "Inventory management",
-      "Customer personalization",
-      "Supply chain optimization"
+      "Regulatory compliance (PCI DSS, GDPR)",
+      "Legacy system modernization",
+      "Security and fraud prevention",
+      "Real-time transaction processing"
     ],
     solutions: [
-      "E-commerce platforms",
-      "Mobile commerce apps",
-      "Inventory management systems",
-      "Customer analytics platforms"
+      "Digital Banking Platforms",
+      "Payment Gateway Solutions",
+      "Blockchain & Cryptocurrency",
+      "Risk Management Systems",
+      "Regulatory Compliance Tools",
+      "Financial Analytics & Reporting"
+    ],
+    icon: "💳"
+  },
+  {
+    id: "ecommerce",
+    name: "E-Commerce",
+    description: "Building scalable e-commerce platforms with advanced features like AI recommendations, omnichannel experiences, and seamless payment integration.",
+    challenges: [
+      "Omnichannel integration",
+      "Inventory management complexity",
+      "Customer personalization at scale",
+      "Mobile commerce optimization"
+    ],
+    solutions: [
+      "Multi-Channel E-commerce Platforms",
+      "AI-Powered Product Recommendations",
+      "Inventory Management Systems",
+      "Payment Gateway Integration",
+      "Mobile Commerce Solutions",
+      "Analytics & Business Intelligence"
     ],
     icon: "🛒"
   },
   {
-    id: "healthcare",
-    name: "Healthcare",
-    description: "Revolutionizing healthcare delivery with digital health solutions and patient-centric technologies.",
+    id: "gpu",
+    name: "GPU Computing",
+    description: "Leveraging GPU acceleration for high-performance computing, AI/ML workloads, and graphics-intensive applications across various industries.",
     challenges: [
-      "Patient data management",
-      "Telemedicine adoption",
-      "Regulatory compliance",
-      "Interoperability"
+      "CUDA optimization complexity",
+      "Memory management",
+      "Parallel processing efficiency",
+      "Cross-platform compatibility"
     ],
     solutions: [
-      "Electronic health records",
-      "Telemedicine platforms",
-      "Patient management systems",
-      "Healthcare analytics"
+      "CUDA Development & Optimization",
+      "Machine Learning Acceleration",
+      "Computer Vision Applications",
+      "Scientific Computing Solutions",
+      "Real-time Rendering Systems",
+      "Parallel Processing Optimization"
     ],
-    icon: "🏥"
+    icon: "🎮"
+  },
+  {
+    id: "retail",
+    name: "Retail Technology",
+    description: "Modernizing retail operations with smart inventory management, customer analytics, and omnichannel experiences that drive sales growth.",
+    challenges: [
+      "Omnichannel customer experience",
+      "Real-time inventory tracking",
+      "Customer behavior analytics",
+      "Supply chain optimization"
+    ],
+    solutions: [
+      "Smart Inventory Management",
+      "Customer Analytics & Insights",
+      "Omnichannel Retail Solutions",
+      "Point of Sale (POS) Systems",
+      "Supply Chain Optimization",
+      "Customer Loyalty Programs"
+    ],
+    icon: "🏪"
   },
   {
     id: "education",
@@ -473,28 +519,28 @@ export const globalOffices = [
     city: "New York",
     address: "123 Tech Avenue, New York, NY 10001",
     phone: "+1 (555) 123-4567",
-    email: "newyork@neotaq.com"
+    email: "newyork@neoteq.com"
   },
   {
     country: "United Kingdom",
     city: "London",
     address: "456 Innovation Street, London EC2A 4DP",
     phone: "+44 20 1234 5678",
-    email: "london@neotaq.com"
+    email: "london@neoteq.com"
   },
   {
     country: "India",
     city: "Bangalore",
     address: "789 Tech Park, Bangalore 560001",
     phone: "+91 80 1234 5678",
-    email: "bangalore@neotaq.com"
+    email: "bangalore@neoteq.com"
   },
   {
     country: "Germany",
     city: "Berlin",
     address: "321 Digital Plaza, Berlin 10115",
     phone: "+49 30 1234 5678",
-    email: "berlin@neotaq.com"
+    email: "berlin@neoteq.com"
   }
 ];
 
@@ -503,21 +549,21 @@ export const testimonials = [
     name: "John Smith",
     position: "CTO, TechCorp Inc",
     company: "TechCorp Inc",
-    testimonial: "Neotaq transformed our digital infrastructure completely. Their expertise in cloud migration and AI implementation has driven significant business growth for us.",
+    testimonial: "Neoteq transformed our digital infrastructure completely. Their expertise in cloud migration and AI implementation has driven significant business growth for us.",
     rating: 5
   },
   {
     name: "Maria Garcia",
     position: "Digital Director, RetailPro",
     company: "RetailPro",
-    testimonial: "The e-commerce solution developed by Neotaq increased our online sales by 200%. Their attention to user experience and technical excellence is outstanding.",
+    testimonial: "The e-commerce solution developed by Neoteq increased our online sales by 200%. Their attention to user experience and technical excellence is outstanding.",
     rating: 5
   },
   {
     name: "David Park",
     position: "VP Technology, FinanceFlow",
     company: "FinanceFlow",
-    testimonial: "Neotaq's team augmentation services provided us with world-class developers who seamlessly integrated with our team and delivered exceptional results.",
+    testimonial: "Neoteq's team augmentation services provided us with world-class developers who seamlessly integrated with our team and delivered exceptional results.",
     rating: 5
   }
 ];

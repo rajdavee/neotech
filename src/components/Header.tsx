@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Logo from './Logo';
 import '../styles/Header.css';
 
 const Header: React.FC = () => {
@@ -24,7 +25,7 @@ const Header: React.FC = () => {
       <div className="header-container">
         <div className="logo">
           <Link to="/">
-            <h1>NEOTAQ</h1>
+            <Logo />
           </Link>
         </div>
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

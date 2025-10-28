@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/App.css';
+// import './styles/App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -37,6 +37,7 @@ function App() {
             <Route path="/insights/:blogId" element={<BlogPost />} />
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
         <Footer />

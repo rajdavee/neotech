@@ -1,7 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Hero.css';
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleLetsTalk = () => {
+    navigate('/contact');
+  };
+
+  const handleOurServices = () => {
+    navigate('/services');
+  };
+
   return (
     <section className="hero">
       <div className="hero-container">
@@ -15,8 +26,8 @@ const Hero: React.FC = () => {
             innovative software development, and comprehensive digital transformation services.
           </p>
           <div className="hero-actions">
-            <button className="primary-btn">Let's Talk</button>
-            <button className="secondary-btn">Our Services</button>
+            <button className="primary-btn" onClick={handleLetsTalk}>Let's Talk</button>
+            <button className="secondary-btn" onClick={handleOurServices}>Our Services</button>
           </div>
         </div>
         <div className="hero-visual">

@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <h3>NEOTAQ</h3>
+              <h3>NEOTEQ</h3>
               <p>Transforming businesses through innovative technology solutions.</p>
             </div>
             <div className="social-links">
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Contact Info</h4>
             <div className="contact-info">
-              <p>📧 hello@neotaq.com</p>
+              <p>📧 hello@neoteq.com</p>
               <p>📞 +1 (555) 123-4567</p>
               <p>🏢 123 Innovation Street<br />Tech Hub, CA 94105</p>
             </div>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
         <div className="footer-bottom">
           <div className="footer-divider"></div>
           <div className="footer-bottom-content">
-            <p>&copy; 2024 Neotaq. All rights reserved.</p>
+            <p>&copy; 2024 Neoteq. All rights reserved.</p>
             <div className="footer-links">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>

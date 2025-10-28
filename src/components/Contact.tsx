@@ -18,7 +18,8 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    alert('Thank you for your message! We will get back to you soon.');
+    setFormData({ name: '', email: '', company: '', message: '' });
   };
 
   return (
@@ -35,8 +36,8 @@ const Contact: React.FC = () => {
               <div className="info-icon">📧</div>
               <div>
                 <h4>Email Us</h4>
-                <p>hello@neotaq.com</p>
-                <p>contact@neotaq.com</p>
+                <p>hello@neoteq.com</p>
+                <p>contact@neoteq.com</p>
               </div>
             </div>
             

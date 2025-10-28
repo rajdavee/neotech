@@ -1,182 +1,149 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { services } from '../data/content';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import GlassCard from '../components/GlassCard';
+import NeonButton from '../components/NeonButton';
 import '../styles/ServicesPage.css';
 
 const ServicesPage: React.FC = () => {
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  const handleExplore = (serviceId: string) => {
+    navigate(`/services/${serviceId}`);
+  };
+
+  const services = [
+    {
+      id: 'digital-transformation',
+      title: 'Digital Transformation',
+      icon: '🚀',
+      color: '#007bff',
+      description: 'Comprehensive digital solutions to modernize your business processes and drive innovation.',
+      features: ['Process Automation', 'Legacy Modernization', 'Digital Strategy', 'Change Management']
+    },
+    {
+      id: 'team-augmentation',
+      title: 'Team Augmentation',
+      icon: '👥',
+      color: '#28a745',
+      description: 'Scale your development team with skilled professionals who integrate seamlessly into your workflow.',
+      features: ['Remote Team Integration', 'Specialized Expertise', 'Agile Methodology', 'Direct Communication']
+    },
+    {
+      id: 'application-development',
+      title: 'Application Development',
+      icon: '💻',
+      color: '#17a2b8',
+      description: 'Custom application development from concept to deployment with cutting-edge technologies.',
+      features: ['Full-Stack Development', 'UI/UX Design', 'Quality Assurance', 'DevOps Integration']
+    },
+    {
+      id: 'cloud-consulting',
+      title: 'Cloud Consulting',
+      icon: '☁️',
+      color: '#fd7e14',
+      description: 'Expert cloud consulting and migration services to optimize your infrastructure.',
+      features: ['Cloud Migration', 'Architecture Design', 'Cost Optimization', 'Security Best Practices']
+    },
+    {
+      id: 'ai-ml',
+      title: 'AI & Machine Learning',
+      icon: '🤖',
+      color: '#ffc107',
+      description: 'Intelligent solutions leveraging artificial intelligence and machine learning capabilities.',
+      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Deep Learning']
+    },
+    {
+      id: 'web-development',
+      title: 'Web Development',
+      icon: '🌐',
+      color: '#17a2b8',
+      description: 'Modern, responsive web applications built with the latest frameworks and technologies.',
+      features: ['React/Angular/Vue', 'Node.js/Python', 'Progressive Web Apps', 'Performance Optimization']
+    },
+    {
+      id: 'mobile-development',
+      title: 'Mobile Development',
+      icon: '📱',
+      color: '#6f42c1',
+      description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
+      features: ['iOS Development', 'Android Development', 'React Native', 'Flutter']
+    },
+    {
+      id: 'blockchain',
+      title: 'Blockchain',
+      icon: '🔗',
+      color: '#20c997',
+      description: 'Decentralized solutions and smart contract development for secure transactions.',
+      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Development', 'Cryptocurrency Integration']
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity',
+      icon: '🔒',
+      color: '#dc3545',
+      description: 'Comprehensive security solutions to protect your digital assets and data.',
+      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response']
+    }
+  ];
+
   return (
     <div className="services-page">
-      {/* Hero Section */}
-      <section className="services-hero">
-        <div className="container">
-          <div className="hero-content">
-            <h1>Our Services</h1>
-            <p>
-              Comprehensive technology solutions designed to accelerate your digital transformation
-              and drive business growth through innovation and expertise.
-            </p>
-            <div className="hero-stats">
-              <div className="hero-stat">
-                <span className="number">500+</span>
-                <span className="label">Projects Delivered</span>
-              </div>
-              <div className="hero-stat">
-                <span className="number">15+</span>
-                <span className="label">Technology Domains</span>
-              </div>
-              <div className="hero-stat">
-                <span className="number">24/7</span>
-                <span className="label">Support Available</span>
-              </div>
-            </div>
-          </div>
+      <div className="services-container">
+        <div className="services-header">
+          <h1 className="modern-title">
+            <span className="title-line">Our</span>
+            <span className="title-accent">Services</span>
+          </h1>
+          <div className="title-underline" />
+          <p className="modern-subtitle">
+            Comprehensive technology solutions tailored to your business needs
+          </p>
         </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="services-grid-section">
-        <div className="container">
-          <div className="services-grid">
-            {services.map((service) => (
-              <div key={service.id} className="service-card">
-                <div className="service-header">
-                  <div className="service-icon">{service.icon}</div>
-                  <h3>{service.name}</h3>
+        
+        <div className="services-grid">
+          {services.map((service) => (
+            <GlassCard 
+              key={service.id} 
+              className={`service-card ${selectedService === service.id ? 'selected' : ''}`}
+              glowColor={service.color}
+              onClick={() => setSelectedService(selectedService === service.id ? null : service.id)}
+            >
+              <div className="service-content">
+                <div className="service-icon" style={{ backgroundColor: service.color }}>
+                  {service.icon}
                 </div>
-                <p className="service-description">{service.shortDescription}</p>
-
-                <div className="service-benefits">
-                  <h4>Key Benefits:</h4>
-                  <ul>
-                    {service.benefits.slice(0, 3).map((benefit, index) => (
-                      <li key={index}>{benefit}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="service-technologies">
-                  <h4>Technologies:</h4>
-                  <div className="tech-tags">
-                    {service.technologies.slice(0, 4).map((tech, index) => (
-                      <span key={index} className="tech-tag">{tech}</span>
-                    ))}
-                    {service.technologies.length > 4 && (
-                      <span className="tech-tag more">+{service.technologies.length - 4} more</span>
-                    )}
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                
+                {selectedService === service.id && (
+                  <div className="service-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                      {service.features.map((feature, index) => (
+                        <li key={index}>
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#28a745" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-
-                <div className="service-actions">
-                  <Link to={`/services/${service.id}`} className="learn-more-btn">
-                    Learn More
-                  </Link>
-                  <Link to="/contact" className="get-quote-btn">
-                    Get Quote
-                  </Link>
-                </div>
+                )}
+                
+                <NeonButton 
+                  variant={selectedService === service.id ? "primary" : "secondary"}
+                  size="small"
+                  onClick={() => handleExplore(service.id)}
+                >
+                  {selectedService === service.id ? 'Selected' : 'Explore'}
+                </NeonButton>
               </div>
-            ))}
-          </div>
+            </GlassCard>
+          ))}
         </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="why-choose-us">
-        <div className="container">
-          <div className="section-header">
-            <h2>Why Choose Neotaq for Your Technology Needs?</h2>
-            <p>We combine deep technical expertise with industry knowledge to deliver exceptional results</p>
-          </div>
-          <div className="benefits-grid">
-            <div className="benefit-card">
-              <div className="benefit-icon">🎯</div>
-              <h3>Proven Expertise</h3>
-              <p>15+ years of experience delivering complex technology solutions across diverse industries</p>
-            </div>
-            <div className="benefit-card">
-              <div className="benefit-icon">⚡</div>
-              <h3>Agile Delivery</h3>
-              <p>Fast-paced development cycles with continuous integration and deployment practices</p>
-            </div>
-            <div className="benefit-card">
-              <div className="benefit-icon">🔒</div>
-              <h3>Security First</h3>
-              <p>Built-in security measures and compliance with industry standards and regulations</p>
-            </div>
-            <div className="benefit-card">
-              <div className="benefit-icon">📈</div>
-              <h3>Scalable Solutions</h3>
-              <p>Architecture designed to grow with your business and handle increasing demands</p>
-            </div>
-            <div className="benefit-card">
-              <div className="benefit-icon">🌐</div>
-              <h3>Global Reach</h3>
-              <p>International presence with local expertise and 24/7 support across time zones</p>
-            </div>
-            <div className="benefit-card">
-              <div className="benefit-icon">🚀</div>
-              <h3>Innovation Focus</h3>
-              <p>Cutting-edge technologies and forward-thinking approaches to solve business challenges</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="our-process">
-        <div className="container">
-          <div className="section-header">
-            <h2>Our Development Process</h2>
-            <p>A structured approach that ensures successful project delivery and client satisfaction</p>
-          </div>
-          <div className="process-steps">
-            <div className="process-step">
-              <div className="step-number">01</div>
-              <h3>Discovery & Analysis</h3>
-              <p>Understanding your business requirements, challenges, and goals through detailed analysis</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">02</div>
-              <h3>Strategy & Planning</h3>
-              <p>Creating comprehensive project roadmap with timelines, milestones, and resource allocation</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">03</div>
-              <h3>Design & Development</h3>
-              <p>Agile development process with regular reviews, testing, and client feedback integration</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">04</div>
-              <h3>Testing & Quality Assurance</h3>
-              <p>Comprehensive testing phases including functional, performance, and security testing</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">05</div>
-              <h3>Deployment & Launch</h3>
-              <p>Smooth deployment with minimal downtime and comprehensive launch support</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">06</div>
-              <h3>Support & Maintenance</h3>
-              <p>Ongoing support, monitoring, updates, and continuous improvement services</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="services-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Start Your Project?</h2>
-            <p>Let's discuss how our services can help transform your business and drive growth</p>
-            <div className="cta-buttons">
-              <Link to="/contact" className="cta-button primary">Get Started Today</Link>
-              <Link to="/about" className="cta-button secondary">Learn About Us</Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };

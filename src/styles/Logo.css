@@ -1,0 +1,46 @@
+/* Logo Component Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: transparent;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.logo-container:hover {
+  transform: scale(1.08);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.logo-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-svg svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.logo-container:hover .logo-svg svg {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-svg svg {
+    width: 160px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-svg svg {
+    width: 140px;
+    height: 42px;
+  }
+}

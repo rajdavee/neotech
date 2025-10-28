@@ -1,373 +1,298 @@
-/* Solution Detail Page Styles */
+/* Modern Solution Detail Page Styles - Matching IndustryDetail */
 .solution-detail {
-  padding-top: 70px;
+  padding: 120px 0 60px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
-.container {
-  max-width: 1200px;
+.solution-detail::before {
+  display: none;
+}
+
+.solution-container {
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
-.section-header {
+/* Back Button */
+.back-button {
+  font-family: 'Inter', sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #e5e7eb;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-button:hover {
+  background: #e5e7eb;
+  transform: translateX(-4px);
+}
+
+/* Error Section */
+.error-section {
   text-align: center;
-  margin-bottom: 60px;
+  padding: 100px 20px;
 }
 
-.section-header h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 16px;
+.error-section h1 {
+  font-size: 3rem;
+  color: #dc3545;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.section-header p {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+.error-section p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 30px;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Hero Section */
-.solution-detail-hero {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  padding: 100px 0;
+.solution-hero {
+  margin-bottom: 80px;
+}
+
+.hero-card {
+  padding: 60px;
   text-align: center;
 }
 
-.breadcrumb {
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.solution-icon-large {
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 30px;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.breadcrumb a {
-  color: #059669;
-  text-decoration: none;
-}
-
-.breadcrumb span {
-  color: #999;
-}
-
-.hero-icon {
   font-size: 4rem;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-.solution-detail-hero h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  margin-bottom: 24px;
+.solution-icon-large:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 
-.hero-description {
-  font-size: 1.3rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  line-height: 1.7;
+.solution-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 20px 0;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
 }
 
-.hero-actions {
+.solution-description {
+  font-size: clamp(1.0625rem, 2vw, 1.375rem);
+  color: #64748b;
+  line-height: 1.8;
+  margin: 0 0 40px 0;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.solution-stats {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
-/* Features */
-.solution-features {
-  padding: 100px 0;
-  background: white;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.feature-card {
-  background: #f8fafc;
-  padding: 30px;
-  border-radius: 12px;
+.stat-item {
   text-align: center;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
 }
 
-.feature-card:hover {
-  background: white;
-  border-color: #059669;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.stat-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
 }
 
-.feature-icon {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #059669;
-}
-
-.feature-card h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 15px;
-}
-
-.feature-card p {
-  color: #666;
-  line-height: 1.6;
-}
-
-/* Benefits */
-.solution-benefits {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.benefit-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.benefit-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.benefit-icon {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #059669;
-}
-
-/* Technologies */
-.solution-technologies {
-  padding: 100px 0;
-  background: white;
-}
-
-.technologies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-}
-
-.tech-card {
-  background: #f8fafc;
-  padding: 30px 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.tech-card:hover {
-  background: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.tech-icon {
-  font-size: 2rem;
-  color: #059669;
-  margin-bottom: 15px;
-}
-
-/* Timeline */
-.implementation-timeline {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-
-.timeline-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-}
-
-.timeline-step {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.step-number {
-  width: 50px;
-  height: 50px;
-  background: #059669;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.step-content h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 10px;
-}
-
-.step-content p {
-  color: #666;
-  line-height: 1.5;
-}
-
-/* Testimonials */
-.solution-testimonials {
-  padding: 100px 0;
-  background: white;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 40px;
-}
-
-.testimonial-card {
-  background: #f8fafc;
-  padding: 40px;
-  border-radius: 16px;
-  position: relative;
-}
-
-.testimonial-card::before {
-  content: '"';
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  font-size: 4rem;
-  color: #059669;
-  font-family: serif;
-}
-
-.testimonial-content {
-  margin-bottom: 30px;
-  padding-left: 40px;
-}
-
-.testimonial-content p {
-  font-style: italic;
-  color: #444;
-  line-height: 1.7;
-}
-
-.testimonial-author {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.author-info h4 {
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 4px;
-}
-
-.author-info p {
-  color: #666;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.author-info .company {
-  color: #059669;
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  color: #64748b;
   font-weight: 500;
 }
 
-.rating {
-  display: flex;
-  gap: 2px;
+/* Sections */
+.features-section,
+.benefits-section,
+.technologies-section,
+.case-studies-section,
+.cta-section {
+  margin-bottom: 80px;
 }
 
-.star {
-  color: #fbbf24;
-  font-size: 1.2rem;
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-/* Industries */
-.solution-industries {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-
-.industries-grid {
+/* Features & Benefits Grid */
+.features-grid,
+.benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
 
-.industry-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: inherit;
+.feature-card,
+.benefit-card {
   transition: all 0.3s ease;
-  border: 2px solid transparent;
 }
 
-.industry-card:hover {
-  border-color: #059669;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.feature-content,
+.benefit-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-.industry-icon {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.feature-icon,
+.benefit-icon {
+  flex-shrink: 0;
 }
 
-.industry-card h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 15px;
+.feature-content p,
+.benefit-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.0625rem;
+  color: #0f172a;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.01em;
 }
 
-/* CTA Section */
-.solution-cta {
-  padding: 120px 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #059669 100%);
-  color: white;
+/* Technologies */
+.technologies-section {
   text-align: center;
 }
 
-.cta-content h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
+.tech-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tech-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  color: #0f172a;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  padding: 12px 24px;
+  border: 2px solid;
+  border-radius: 25px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* Case Studies */
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+}
+
+.case-study-card {
+  transition: all 0.3s ease;
+}
+
+.case-study-content {
+  padding: 30px;
+}
+
+.case-study-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
   margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.case-study-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.detail-item strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+}
+
+.cta-card {
+  padding: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 
 .cta-content p {
-  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.0625rem, 2vw, 1.375rem);
+  color: #64748b;
+  line-height: 1.8;
   margin-bottom: 40px;
-  opacity: 0.9;
+  letter-spacing: -0.01em;
 }
 
 .cta-buttons {
@@ -377,94 +302,50 @@
   flex-wrap: wrap;
 }
 
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 16px 32px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 1.05rem;
-}
-
-.cta-button.primary {
-  background: white;
-  color: #059669;
-}
-
-.cta-button.primary:hover {
-  background: #f1f5f9;
-  transform: translateY(-2px);
-}
-
-.cta-button.secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.cta-button.secondary:hover {
-  background: white;
-  color: #059669;
-  transform: translateY(-2px);
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  .solution-detail-hero h1 {
-    font-size: 2.5rem;
+  .hero-card {
+    padding: 40px 30px;
   }
   
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
+  .solution-stats {
+    gap: 40px;
   }
   
   .features-grid,
-  .benefits-grid,
-  .technologies-grid,
-  .timeline-steps,
-  .testimonials-grid,
-  .industries-grid {
+  .benefits-grid {
     grid-template-columns: 1fr;
   }
   
-  .timeline-step {
-    flex-direction: column;
-    text-align: center;
+  .case-studies-grid {
+    grid-template-columns: 1fr;
   }
   
-  .cta-content h2 {
-    font-size: 2.2rem;
+  .cta-card {
+    padding: 40px 30px;
   }
   
   .cta-buttons {
     flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-button {
-    min-width: 200px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
+  .solution-container {
     padding: 0 15px;
   }
   
-  .solution-detail-hero h1 {
-    font-size: 2rem;
+  .solution-icon-large {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
   }
   
-  .section-header h2 {
-    font-size: 2rem;
-  }
-  
-  .feature-card,
-  .benefit-card,
-  .tech-card {
+  .case-study-content {
     padding: 20px;
+  }
+  
+  .cta-card {
+    padding: 30px 20px;
   }
 }
