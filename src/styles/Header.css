@@ -1,6 +1,6 @@
 .header {
   background: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   position: fixed;
   top: 0;
   left: 0;
@@ -10,13 +10,13 @@
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 85px;
 }
 
 .logo {
@@ -44,21 +44,21 @@
 .nav-link {
   font-family: 'Inter', sans-serif;
   text-decoration: none;
-  color: #334155;
+  color: #2c3e50;
   font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.01em;
+  font-size: 15px;
+  letter-spacing: 0;
   transition: all 0.3s ease;
   position: relative;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 8px 0;
   white-space: nowrap;
 }
 
 .nav-link:hover {
-  color: #0f172a;
+  color: #1a1a1a;
 }
 
 .nav-link::after {
@@ -67,8 +67,8 @@
   bottom: -5px;
   left: 0;
   width: 0;
-  height: 1px;
-  background-color: #0f172a;
+  height: 2px;
+  background-color: #1a1a1a;
   transition: width 0.3s ease;
 }
 
@@ -119,8 +119,8 @@
 }
 
 .dropdown-item:hover {
-  background-color: #f8fafc;
-  color: #2563eb;
+  background-color: #f8f9fa;
+  color: #1a1a1a;
   padding-left: 24px;
 }
 
@@ -136,21 +136,25 @@
 
 .cta-button {
   font-family: 'Inter', sans-serif;
-  background: #0f172a;
+  background: #1a1a1a;
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 600;
   font-size: 14px;
-  letter-spacing: 0px;
+  letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
 }
 
 .cta-button:hover {
-  background: #1e293b;
+  background: #333333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }
 
 .menu-toggle {
@@ -170,14 +174,33 @@
   transition: 0.3s;
 }
 
+@media (max-width: 968px) {
+  .header-container {
+    padding: 0 24px;
+  }
+  
+  .nav-list {
+    gap: 20px;
+  }
+  
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 768px) {
+  .header-container {
+    padding: 0 20px;
+    height: 70px;
+  }
+  
   .nav {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     display: none;
   }
 
@@ -187,7 +210,7 @@
 
   .nav-list {
     flex-direction: column;
-    padding: 20px;
+    padding: 24px;
     gap: 20px;
   }
 

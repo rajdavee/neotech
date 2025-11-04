@@ -18,26 +18,55 @@ const CallToAction: React.FC = () => {
       <div className="cta-container">
         <div className="cta-content">
           <div className="cta-text">
-            <h2>Ready to Transform Your Business?</h2>
+            <h2>Why Neoteq</h2>
+            <h3>We Deliver More Than Code - We Deliver Confidence</h3>
             <p>
-              Let's discuss how our cutting-edge technology solutions can drive your success. 
-              Get a free consultation and discover the possibilities.
+              Our foundation lies in building scalable, reliable, and secure systems - the kind that power enterprises forward.
             </p>
             
             <div className="cta-features">
               <div className="feature-item">
-                <div className="feature-icon">🚀</div>
-                <span>Free Consultation</span>
+                <div className="feature-icon">✨</div>
+                <span>Decades of collective experience</span>
               </div>
               <div className="feature-item">
-                <div className="feature-icon">⚡</div>
-                <span>Quick Response</span>
+                <div className="feature-icon">📊</div>
+                <span>Proven performance metrics</span>
               </div>
               <div className="feature-item">
-                <div className="feature-icon">🎯</div>
-                <span>Custom Solutions</span>
+                <div className="feature-icon">🤝</div>
+                <span>Transparent engagement models</span>
+              </div>
+              <div className="feature-item">
+                <div className="feature-icon">💡</div>
+                <span>Domain-driven innovation</span>
+              </div>
+              <div className="feature-item">
+                <div className="feature-icon">🔄</div>
+                <span>Continuous collaboration and support</span>
               </div>
             </div>
+            
+            <p className="partnership-message">
+              Every project is a partnership, not a transaction.
+            </p>
+            
+            <div className="engagement-models">
+              <h4>Engagement Models</h4>
+              <div className="engagement-list">
+                <span>• Fixed-scope Projects</span>
+                <span>• Retainer-based Teams</span>
+                <span>• Co-development Partnerships</span>
+              </div>
+            </div>
+            
+            <p className="global-engagement">
+              <strong>Global Engagement:</strong> We collaborate with partners worldwide - delivering measurable digital transformation across healthcare, technology, and industrial domains.
+            </p>
+            
+            <p className="trusted-partner">
+              Whether you're building a platform, optimising systems, or scaling AI capabilities, Neoteq is your trusted engineering partner.
+            </p>
           </div>
           
           <div className="cta-actions">
@@ -49,17 +78,6 @@ const CallToAction: React.FC = () => {
               <span>Schedule a Call</span>
               <div className="btn-icon">📞</div>
             </button>
-          </div>
-        </div>
-        
-        <div className="cta-visual">
-          <div className="floating-elements">
-            <div className="element element-1">💻</div>
-            <div className="element element-2">🌐</div>
-            <div className="element element-3">📱</div>
-            <div className="element element-4">☁️</div>
-            <div className="element element-5">🤖</div>
-            <div className="element element-6">⚡</div>
           </div>
         </div>
       </div>

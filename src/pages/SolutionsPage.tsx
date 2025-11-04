@@ -17,7 +17,7 @@ const SolutionsPage: React.FC = () => {
       id: "crm",
       name: "CRM Solutions",
       icon: "👤",
-      color: "#007bff",
+      color: "#1a1a1a",
       description: "Comprehensive customer relationship management solutions that enhance customer engagement and drive sales growth.",
       features: ["Customer Data Management", "Sales Pipeline Tracking", "Marketing Automation", "Customer Service Management", "Analytics and Reporting"],
       benefits: ["Improved customer relationships", "Increased sales conversion", "Enhanced customer service", "Better data insights", "Streamlined processes"],
@@ -27,7 +27,7 @@ const SolutionsPage: React.FC = () => {
       id: "ecommerce",
       name: "E-Commerce Solutions",
       icon: "🛍️",
-      color: "#28a745",
+      color: "#2c3e50",
       description: "End-to-end e-commerce platforms that deliver exceptional shopping experiences and drive online sales.",
       features: ["Product Catalog Management", "Shopping Cart and Checkout", "Payment Integration", "Order Management", "Mobile Responsiveness"],
       benefits: ["Increased online sales", "Better customer experience", "Scalable architecture", "Mobile optimization", "Secure transactions"],
@@ -37,7 +37,7 @@ const SolutionsPage: React.FC = () => {
       id: "erp",
       name: "ERP Solutions",
       icon: "📊",
-      color: "#ffc107",
+      color: "#4a4a4a",
       description: "Enterprise resource planning systems that integrate and streamline business processes across your organization.",
       features: ["Financial Management", "Human Resources", "Supply Chain Management", "Manufacturing Execution", "Business Intelligence"],
       benefits: ["Process integration", "Improved efficiency", "Better data accuracy", "Cost reduction", "Enhanced reporting"],
@@ -47,7 +47,7 @@ const SolutionsPage: React.FC = () => {
       id: "cms",
       name: "Content Management Systems",
       icon: "📝",
-      color: "#17a2b8",
+      color: "#555555",
       description: "Flexible content management solutions that empower teams to create, manage, and publish digital content effortlessly.",
       features: ["Content Creation and Editing", "Multi-channel Publishing", "User Management", "SEO Optimization", "Analytics Integration"],
       benefits: ["Easy content management", "Improved collaboration", "Better SEO performance", "Faster time to market", "Cost-effective maintenance"],
@@ -57,7 +57,7 @@ const SolutionsPage: React.FC = () => {
       id: "rpa",
       name: "Robotic Process Automation",
       icon: "🤖",
-      color: "#6f42c1",
+      color: "#1a1a1a",
       description: "Intelligent automation solutions that streamline repetitive tasks and improve operational efficiency.",
       features: ["Process Automation", "Bot Development", "Workflow Optimization", "Exception Handling", "Performance Monitoring"],
       benefits: ["Reduced manual effort", "Improved accuracy", "Cost savings", "Faster processing", "Employee satisfaction"],
@@ -67,7 +67,7 @@ const SolutionsPage: React.FC = () => {
       id: "analytics",
       name: "Business Intelligence & Analytics",
       icon: "📈",
-      color: "#dc3545",
+      color: "#2c3e50",
       description: "Advanced analytics and business intelligence solutions that transform data into actionable insights for better decision making.",
       features: ["Data Visualization", "Predictive Analytics", "Real-time Dashboards", "Report Generation", "Data Integration"],
       benefits: ["Data-driven decisions", "Improved performance", "Cost optimization", "Competitive advantage", "Risk mitigation"],
@@ -112,8 +112,8 @@ const SolutionsPage: React.FC = () => {
                         {solution.features.map((feature, index) => (
                           <li key={index}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#28a745" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              <path d="M9 12L11 14L15 10" stroke="#28a745" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                              <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                              <path d="M9 12L11 14L15 10" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                             {feature}
                           </li>
@@ -127,8 +127,8 @@ const SolutionsPage: React.FC = () => {
                         {solution.benefits.map((benefit, index) => (
                           <li key={index}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="#ffc107"/>
-                              <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" stroke="#ffc107" strokeWidth="2"/>
+                              <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="#1a1a1a"/>
+                              <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" stroke="#1a1a1a" strokeWidth="2"/>
                             </svg>
                             {benefit}
                           </li>

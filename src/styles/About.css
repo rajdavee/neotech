@@ -1,10 +1,10 @@
 /* Ultra-Modern About Section Styles */
 .about {
-  padding: 120px 0;
-  background: #fafafa;
+  padding: 140px 0;
+  background: #ffffff;
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
 }
@@ -16,29 +16,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 123, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(0, 86, 179, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 64, 133, 0.05) 0%, transparent 50%);
-  z-index: 0;
-}
-
-.about::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="modern-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="%23333" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23modern-grid)"/></svg>');
-  opacity: 0.1;
+  background: transparent;
   z-index: 0;
 }
 
 .about-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
   position: relative;
   z-index: 1;
 }
@@ -56,36 +41,36 @@
 }
 
 .modern-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 800;
-  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 24px;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  letter-spacing: -0.03em;
+  gap: 12px;
+  letter-spacing: -0.01em;
 }
 
 .title-line {
   font-family: 'Inter', sans-serif;
-  color: #0f172a;
-  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  letter-spacing: 0;
 }
 
 .title-accent {
   font-family: 'Inter', sans-serif;
-  color: #0f172a;
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  color: #1a1a1a;
+  font-size: clamp(3rem, 6vw, 4rem);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 
 .title-underline {
   width: 60px;
-  height: 2px;
-  background: #0f172a;
+  height: 3px;
+  background: #1a1a1a;
   border-radius: 2px;
   position: relative;
   overflow: hidden;
@@ -114,12 +99,12 @@
 
 .modern-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(1.0625rem, 2vw, 1.5rem);
-  color: #64748b;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  color: #4a4a4a;
   font-weight: 400;
-  margin-bottom: 40px;
-  line-height: 1.75;
-  letter-spacing: -0.01em;
+  margin-bottom: 50px;
+  line-height: 1.7;
+  letter-spacing: 0;
 }
 
 /* Description Cards */
@@ -141,12 +126,12 @@
 
 .description-card p {
   font-family: 'Inter', sans-serif;
-  color: #475569;
-  line-height: 1.85;
-  font-size: 1.125rem;
+  color: #666666;
+  line-height: 1.6;
+  font-size: 1rem;
   margin: 0;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 /* Feature Cards */
@@ -209,12 +194,12 @@
 }
 
 .feature h4 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.375rem;
   font-weight: 600;
-  color: #0f172a;
+  color: #1a1a1a;
   margin-bottom: 8px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: normal;
@@ -222,12 +207,12 @@
 
 .feature p {
   font-family: 'Inter', sans-serif;
-  color: #64748b;
+  color: #666666;
   margin: 0;
-  font-size: 1.0625rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.6;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 /* Stats Section */
@@ -245,14 +230,14 @@
 }
 
 .stats-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 800;
-  color: #0f172a;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #1a1a1a;
   margin-bottom: 40px;
   text-align: center;
   position: relative;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .stats-title::after {
@@ -263,7 +248,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #007bff, #0056b3);
+  background: #1a1a1a;
   border-radius: 2px;
 }
 
@@ -292,7 +277,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(26, 26, 26, 0.05), transparent);
   transition: left 0.5s ease;
 }
 
@@ -302,20 +287,20 @@
 
 .modern-stat:hover {
   transform: translateY(-5px) scale(1.05);
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(102, 126, 234, 0.3);
-  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(26, 26, 26, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .modern-number {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
   font-weight: 700;
-  color: #0f172a;
+  color: #1a1a1a;
   margin-bottom: 10px;
   display: block;
   transition: all 0.3s ease;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
 }
 
 .modern-stat:hover .modern-number {
@@ -324,8 +309,8 @@
 
 .modern-label {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  color: #64748b;
+  font-size: 0.95rem;
+  color: #666666;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;

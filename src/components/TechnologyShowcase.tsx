@@ -13,12 +13,75 @@ interface Technology {
 
 const technologies: Technology[] = [
   {
+    id: "cuda",
+    name: "CUDA",
+    category: "GPU/AI",
+    description: "Parallel computing platform for GPU programming and kernel-level optimisation",
+    icon: "⚡",
+    color: "#1a1a1a",
+    proficiency: 95
+  },
+  {
+    id: "pytorch",
+    name: "PyTorch",
+    category: "AI/ML",
+    description: "Deep learning framework for building and training neural networks",
+    icon: "🔥",
+    color: "#2c3e50",
+    proficiency: 92
+  },
+  {
+    id: "tensorrt",
+    name: "TensorRT",
+    category: "GPU/AI",
+    description: "NVIDIA's deep learning inference optimizer for high-performance deployment",
+    icon: "🚀",
+    color: "#4a4a4a",
+    proficiency: 90
+  },
+  {
+    id: "onnx",
+    name: "ONNX",
+    category: "AI/ML",
+    description: "Open Neural Network Exchange format for model interoperability",
+    icon: "🔄",
+    color: "#555555",
+    proficiency: 88
+  },
+  {
+    id: "huggingface",
+    name: "Hugging Face",
+    category: "AI/ML",
+    description: "Transformers library and model hub for state-of-the-art NLP and LLM models",
+    icon: "🤗",
+    color: "#1a1a1a",
+    proficiency: 93
+  },
+  {
+    id: "langchain",
+    name: "LangChain",
+    category: "AI/ML",
+    description: "Framework for building applications with LLMs and agentic AI systems",
+    icon: "🔗",
+    color: "#2c3e50",
+    proficiency: 90
+  },
+  {
+    id: "triton",
+    name: "Triton Inference Server",
+    category: "GPU/AI",
+    description: "Open-source AI inference serving solution for production deployment",
+    icon: "⚓",
+    color: "#4a4a4a",
+    proficiency: 88
+  },
+  {
     id: "react",
     name: "React",
     category: "Frontend",
     description: "Modern UI library for building interactive user interfaces",
     icon: "⚛️",
-    color: "#61DAFB",
+    color: "#555555",
     proficiency: 95
   },
   {
@@ -27,7 +90,7 @@ const technologies: Technology[] = [
     category: "Backend",
     description: "JavaScript runtime for scalable server-side applications",
     icon: "🟢",
-    color: "#339933",
+    color: "#666666",
     proficiency: 90
   },
   {
@@ -36,7 +99,7 @@ const technologies: Technology[] = [
     category: "Backend",
     description: "Versatile programming language for AI, ML, and web development",
     icon: "🐍",
-    color: "#3776AB",
+    color: "#1a1a1a",
     proficiency: 92
   },
   {
@@ -45,7 +108,7 @@ const technologies: Technology[] = [
     category: "Cloud",
     description: "Comprehensive cloud computing platform and services",
     icon: "☁️",
-    color: "#FF9900",
+    color: "#2c3e50",
     proficiency: 88
   },
   {
@@ -54,7 +117,7 @@ const technologies: Technology[] = [
     category: "DevOps",
     description: "Containerization platform for application deployment",
     icon: "🐳",
-    color: "#2496ED",
+    color: "#4a4a4a",
     proficiency: 85
   },
   {
@@ -63,26 +126,8 @@ const technologies: Technology[] = [
     category: "DevOps",
     description: "Container orchestration platform for scalable deployments",
     icon: "⚓",
-    color: "#326CE5",
+    color: "#555555",
     proficiency: 82
-  },
-  {
-    id: "tensorflow",
-    name: "TensorFlow",
-    category: "AI/ML",
-    description: "Open-source machine learning framework for AI applications",
-    icon: "🧠",
-    color: "#FF6F00",
-    proficiency: 87
-  },
-  {
-    id: "blockchain",
-    name: "Blockchain",
-    category: "Emerging",
-    description: "Distributed ledger technology for secure transactions",
-    icon: "⛓️",
-    color: "#F7931A",
-    proficiency: 80
   }
 ];
 
@@ -100,8 +145,8 @@ const TechnologyShowcase: React.FC = () => {
     <section className="technology-showcase">
       <div className="tech-container">
         <div className="tech-header">
-          <h2>Our Technology Stack</h2>
-          <p>Cutting-edge technologies powering innovative solutions across industries</p>
+          <h2>Capability Matrix</h2>
+          <p>We enable AI-driven transformation across every layer of technology</p>
         </div>
 
         <div className="tech-categories">

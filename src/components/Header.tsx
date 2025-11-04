@@ -99,7 +99,7 @@ const Header: React.FC = () => {
           </ul>
         </nav>
         <div className="header-actions">
-          <button className="cta-button" onClick={handleCTAClick}>Let's Talk</button>
+          <button className="cta-button" onClick={handleCTAClick}>Request Demo</button>
           <button className="menu-toggle" onClick={toggleMenu}>
             <span></span>
             <span></span>

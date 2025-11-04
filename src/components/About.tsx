@@ -79,54 +79,51 @@ const About: React.FC = () => {
               </div>
               
               <p className="about-subtitle modern-subtitle">
-                Leading the future of technology with innovative solutions
+                We blend innovation, precision, and experience to create intelligent digital ecosystems for modern enterprises
               </p>
               
               <div className="description-cards">
-                <GlassCard className="description-card" glowColor="#007bff">
+                <GlassCard className="description-card" glowColor="#1a1a1a">
                   <p>
-                    At Neoteq, we are passionate about transforming businesses through cutting-edge technology. 
-                    With over a decade of experience, we specialize in delivering comprehensive digital solutions 
-                    that drive growth, enhance efficiency, and create competitive advantages for our clients.
+                    At Neoteq, we blend innovation, precision, and experience to create intelligent digital ecosystems for modern enterprises.
+                    With over 30 years of combined experience, our team operates at the intersection of AI, Cloud Infrastructure, and Modern Web Technologies - building scalable systems that drive measurable impact.
                   </p>
                 </GlassCard>
                 
-                <GlassCard className="description-card" glowColor="#0056b3">
+                <GlassCard className="description-card" glowColor="#2c3e50">
                   <p>
-                    Our team of expert developers, designers, and strategists work collaboratively to understand 
-                    your unique challenges and deliver tailored solutions that exceed expectations. From AI-driven 
-                    applications to scalable cloud infrastructure, we're your trusted partner in digital transformation.
+                    We combine the agility of a startup with the reliability of an enterprise, delivering mission-critical software solutions across healthcare, infrastructure, and AI-driven industries.
                   </p>
                 </GlassCard>
               </div>
               
               <div className="about-features">
-                <GlassCard className="feature-card" glowColor="#28a745">
+                <GlassCard className="feature-card" glowColor="#1a1a1a">
                   <div className="feature">
                     <div className="feature-icon modern-icon">✨</div>
                     <div>
-                      <h4>Innovation First</h4>
-                      <p>Leveraging the latest technologies to create groundbreaking solutions</p>
+                      <h4>Our Approach</h4>
+                      <p>We design with clarity, develop with precision, and deliver with accountability</p>
                     </div>
                   </div>
                 </GlassCard>
                 
-                <GlassCard className="feature-card" glowColor="#007bff">
+                <GlassCard className="feature-card" glowColor="#2c3e50">
                   <div className="feature">
                     <div className="feature-icon modern-icon">🎯</div>
                     <div>
-                      <h4>Client-Centric</h4>
-                      <p>Focusing on your success with personalized service and support</p>
+                      <h4>Our Expertise</h4>
+                      <p>We specialise in enterprise-grade development, AI integration, and GPU optimisation - helping businesses harness next-generation technology for sustainable growth</p>
                     </div>
                   </div>
                 </GlassCard>
                 
-                <GlassCard className="feature-card" glowColor="#ffc107">
+                <GlassCard className="feature-card" glowColor="#4a4a4a">
                   <div className="feature">
                     <div className="feature-icon modern-icon">⚡</div>
                     <div>
-                      <h4>Agile Delivery</h4>
-                      <p>Fast, efficient project delivery with continuous communication</p>
+                      <h4>Partnership Focus</h4>
+                      <p>Every project is a partnership, not a transaction</p>
                     </div>
                   </div>
                 </GlassCard>
@@ -134,7 +131,7 @@ const About: React.FC = () => {
             </div>
             
             <div className="about-stats" id="about-stats">
-              <GlassCard className="stats-card" glowColor="#007bff">
+              <GlassCard className="stats-card" glowColor="#1a1a1a">
                 <h3 className="stats-title">Our Track Record</h3>
                 <div className="stats-grid">
                   {animatedStats.map((stat, index) => (

@@ -14,76 +14,68 @@ const ServicesPage: React.FC = () => {
 
   const services = [
     {
-      id: 'digital-transformation',
-      title: 'Digital Transformation',
-      icon: '🚀',
-      color: '#007bff',
-      description: 'Comprehensive digital solutions to modernize your business processes and drive innovation.',
-      features: ['Process Automation', 'Legacy Modernization', 'Digital Strategy', 'Change Management']
-    },
-    {
-      id: 'team-augmentation',
-      title: 'Team Augmentation',
+      id: 'staff-augmentation',
+      title: 'Staff Augmentation',
       icon: '👥',
-      color: '#28a745',
-      description: 'Scale your development team with skilled professionals who integrate seamlessly into your workflow.',
+      color: '#1a1a1a',
+      description: 'Our experts, your team - flexible, skilled, and aligned to your vision.',
       features: ['Remote Team Integration', 'Specialized Expertise', 'Agile Methodology', 'Direct Communication']
     },
     {
-      id: 'application-development',
-      title: 'Application Development',
-      icon: '💻',
-      color: '#17a2b8',
-      description: 'Custom application development from concept to deployment with cutting-edge technologies.',
-      features: ['Full-Stack Development', 'UI/UX Design', 'Quality Assurance', 'DevOps Integration']
+      id: 'product-engineering',
+      title: 'Product Engineering',
+      icon: '🚀',
+      color: '#2c3e50',
+      description: 'Full-cycle development - from architecture to maintenance.',
+      features: ['Full-cycle Development', 'Architecture Design', 'Quality Assurance', 'Maintenance & Support']
     },
     {
-      id: 'cloud-consulting',
-      title: 'Cloud Consulting',
-      icon: '☁️',
-      color: '#fd7e14',
-      description: 'Expert cloud consulting and migration services to optimize your infrastructure.',
-      features: ['Cloud Migration', 'Architecture Design', 'Cost Optimization', 'Security Best Practices']
+      id: 'dedicated-hires',
+      title: 'Dedicated Hires',
+      icon: '💼',
+      color: '#4a4a4a',
+      description: 'Build your in-house capability with vetted professionals.',
+      features: ['Vetted Professionals', 'In-house Capability', 'Long-term Partnerships', 'Dedicated Resources']
     },
     {
-      id: 'ai-ml',
-      title: 'AI & Machine Learning',
+      id: 'turnkey-projects',
+      title: 'Turnkey Projects',
+      icon: '🎯',
+      color: '#555555',
+      description: 'End-to-end solutions, delivered on time and at scale.',
+      features: ['End-to-end Solutions', 'On-time Delivery', 'Scalable Architecture', 'Complete Ownership']
+    },
+    {
+      id: 'ai-llm-platforms',
+      title: 'AI & LLM Platforms',
       icon: '🤖',
-      color: '#ffc107',
-      description: 'Intelligent solutions leveraging artificial intelligence and machine learning capabilities.',
-      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Deep Learning']
+      color: '#1a1a1a',
+      description: 'Agentic AI, RAG, automation, and distributed intelligence.',
+      features: ['Agentic AI', 'RAG Infrastructure', 'Automation', 'Distributed Intelligence']
     },
     {
-      id: 'web-development',
-      title: 'Web Development',
-      icon: '🌐',
-      color: '#17a2b8',
-      description: 'Modern, responsive web applications built with the latest frameworks and technologies.',
-      features: ['React/Angular/Vue', 'Node.js/Python', 'Progressive Web Apps', 'Performance Optimization']
+      id: 'gpu-optimisation',
+      title: 'GPU Optimisation',
+      icon: '⚡',
+      color: '#2c3e50',
+      description: 'Custom CUDA/AMD kernel-level optimisation for performance and energy efficiency.',
+      features: ['Custom CUDA Kernels', 'Performance Engineering', 'Energy Efficiency', 'Cost Reduction']
     },
     {
-      id: 'mobile-development',
-      title: 'Mobile Development',
-      icon: '📱',
-      color: '#6f42c1',
-      description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
-      features: ['iOS Development', 'Android Development', 'React Native', 'Flutter']
+      id: 'healthcare-ai',
+      title: 'Healthcare AI Stack',
+      icon: '🏥',
+      color: '#4a4a4a',
+      description: 'HIPAA-compliant patient logistics and workflow automation.',
+      features: ['HIPAA Compliance', 'Patient Logistics', 'Workflow Automation', 'Healthcare Analytics']
     },
     {
-      id: 'blockchain',
-      title: 'Blockchain',
-      icon: '🔗',
-      color: '#20c997',
-      description: 'Decentralized solutions and smart contract development for secure transactions.',
-      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Development', 'Cryptocurrency Integration']
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity',
-      icon: '🔒',
-      color: '#dc3545',
-      description: 'Comprehensive security solutions to protect your digital assets and data.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response']
+      id: 'cloud-edge-deployments',
+      title: 'Cloud & Edge Deployments',
+      icon: '☁️',
+      color: '#555555',
+      description: 'Containerised AI solutions with adaptive scaling and real-time monitoring.',
+      features: ['Containerised Solutions', 'Adaptive Scaling', 'Real-time Monitoring', 'Edge Computing']
     }
   ];
 
@@ -97,7 +89,7 @@ const ServicesPage: React.FC = () => {
           </h1>
           <div className="title-underline" />
           <p className="modern-subtitle">
-            Comprehensive technology solutions tailored to your business needs
+            We deliver technology partnerships designed for scalability and trust
           </p>
         </div>
         
@@ -123,7 +115,7 @@ const ServicesPage: React.FC = () => {
                       {service.features.map((feature, index) => (
                         <li key={index}>
                           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#28a745" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#1a1a1a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                           </svg>
                           {feature}
                         </li>

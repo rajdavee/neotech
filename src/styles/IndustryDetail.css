@@ -124,7 +124,7 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #007bff;
+  color: #1a1a1a;
   margin-bottom: 10px;
 }
 
@@ -154,7 +154,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #007bff, #0056b3);
+  background: #1a1a1a;
   border-radius: 2px;
 }
 
@@ -248,19 +248,19 @@
 
 .tech-tag {
   padding: 12px 24px;
-  background: rgba(0, 123, 255, 0.1);
-  border: 2px solid #007bff;
+  background: rgba(26, 26, 26, 0.1);
+  border: 2px solid #1a1a1a;
   border-radius: 25px;
   font-size: 1rem;
-  color: #007bff;
+  color: #1a1a1a;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .tech-tag:hover {
-  background: rgba(0, 123, 255, 0.2);
+  background: rgba(26, 26, 26, 0.2);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* Case Studies Section */
@@ -299,13 +299,13 @@
 
 .detail-item {
   padding: 15px;
-  background: rgba(0, 123, 255, 0.05);
+  background: rgba(26, 26, 26, 0.05);
   border-radius: 10px;
-  border-left: 4px solid #007bff;
+  border-left: 4px solid #1a1a1a;
 }
 
 .detail-item strong {
-  color: #007bff;
+  color: #1a1a1a;
   font-weight: 600;
 }
 

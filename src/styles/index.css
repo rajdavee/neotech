@@ -19,13 +19,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  line-height: 1.7;
-  color: #1a202c;
+  line-height: 1.6;
+  color: #2c3e50;
   background: #ffffff;
   min-height: 100vh;
   overflow-x: hidden;
   font-size: 16px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: normal;
@@ -33,11 +33,11 @@ body {
 
 /* Typography Scale */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', 'Inter', sans-serif;
+  font-family: 'Inter', 'Poppins', sans-serif;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: #0f172a;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #1a1a1a;
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: normal;
@@ -45,17 +45,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-}
-
-h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
   font-weight: 700;
   hyphens: auto;
   -webkit-hyphens: auto;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  letter-spacing: -0.01em;
 }
 
 h3 {
@@ -66,16 +68,16 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 600;
   hyphens: auto;
   -webkit-hyphens: auto;
 }
 
 p {
-  font-size: 1.0625rem;
-  line-height: 1.75;
-  color: #475569;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a4a4a;
   font-weight: 400;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -158,25 +160,25 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #1a1a1a;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #333333;
 }
 
 /* Selection Styling */
 ::selection {
-  background: #cbd5e1;
-  color: #0f172a;
+  background: #1a1a1a;
+  color: #ffffff;
 }
 
 ::-moz-selection {
-  background: #cbd5e1;
-  color: #0f172a;
+  background: #1a1a1a;
+  color: #ffffff;
 }

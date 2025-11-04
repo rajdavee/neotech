@@ -13,58 +13,55 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 123, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(0, 86, 179, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 64, 133, 0.05) 0%, transparent 50%);
+  background: transparent;
   z-index: 0;
 }
 
 .services-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
   position: relative;
   z-index: 1;
 }
 
 .services-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .modern-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 800;
-  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 24px;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 .title-line {
   font-family: 'Inter', sans-serif;
-  color: #0f172a;
-  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  letter-spacing: 0;
 }
 
 .title-accent {
   font-family: 'Inter', sans-serif;
-  color: #0f172a;
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  color: #1a1a1a;
+  font-size: clamp(3rem, 6vw, 4rem);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 
 .title-underline {
   width: 60px;
-  height: 2px;
-  background: #0f172a;
+  height: 3px;
+  background: #1a1a1a;
   border-radius: 2px;
   position: relative;
   overflow: hidden;
@@ -93,18 +90,18 @@
 
 .modern-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(1.0625rem, 2vw, 1.375rem);
-  color: #64748b;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  color: #4a4a4a;
   font-weight: 400;
-  margin-bottom: 40px;
-  line-height: 1.75;
-  letter-spacing: -0.01em;
+  margin-bottom: 50px;
+  line-height: 1.7;
+  letter-spacing: 0;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
 }
 
 .service-card {
@@ -112,32 +109,37 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
 }
 
 .service-card.selected {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 .service-content {
   text-align: center;
-  padding: 30px;
+  padding: 36px 28px;
 }
 
 .service-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
-  margin: 0 auto 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-size: 2.2rem;
+  margin: 0 auto 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -164,12 +166,12 @@
 }
 
 .service-content h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.625rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 15px;
-  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: normal;
@@ -177,17 +179,17 @@
 
 .service-content p {
   font-family: 'Inter', sans-serif;
-  color: #64748b;
-  line-height: 1.75;
-  margin-bottom: 20px;
-  font-size: 1.0625rem;
+  color: #4a4a4a;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  font-size: 1rem;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .service-features {
-  margin: 20px 0;
-  padding: 20px;
+  margin: 24px 0;
+  padding: 24px;
   background: #fafafa;
   border-radius: 8px;
   border: 1px solid #e5e7eb;
@@ -208,7 +210,7 @@
 .service-features h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #0f172a;
+  color: #1a1a1a;
   margin-bottom: 15px;
 }
 
@@ -220,7 +222,7 @@
 
 .service-features li {
   padding: 8px 0;
-  color: #495057;
+  color: #666666;
   font-size: 0.95rem;
   display: flex;
   align-items: center;
@@ -233,6 +235,10 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
+  .services-container {
+    padding: 0 24px;
+  }
+  
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
@@ -241,6 +247,14 @@
 @media (max-width: 768px) {
   .services {
     padding: 80px 0;
+  }
+  
+  .services-container {
+    padding: 0 20px;
+  }
+  
+  .services-header {
+    margin-bottom: 50px;
   }
   
   .modern-title {
@@ -253,11 +267,11 @@
   
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
   
   .service-content {
-    padding: 20px;
+    padding: 28px 24px;
   }
   
   .service-icon {
@@ -277,15 +291,15 @@
   }
   
   .modern-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .service-content h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
   
   .service-content p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 

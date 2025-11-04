@@ -18,15 +18,13 @@ const Hero: React.FC = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            AI-Driven Software Development & 
-            <span className="highlight"> Digital Transformation</span>
+            Engineering the Future with <span className="highlight">AI and Scalable Intelligence</span>
           </h1>
           <p className="hero-subtitle">
-            Empowering businesses with cutting-edge technology solutions, 
-            innovative software development, and comprehensive digital transformation services.
+            Cutting-edge AI | Scalable Infrastructure | Enterprise-grade Software
           </p>
           <div className="hero-actions">
-            <button className="primary-btn" onClick={handleLetsTalk}>Let's Talk</button>
+            <button className="primary-btn" onClick={handleLetsTalk}>Request Demo</button>
             <button className="secondary-btn" onClick={handleOurServices}>Our Services</button>
           </div>
         </div>

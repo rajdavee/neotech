@@ -12,7 +12,7 @@ interface GlassCardProps {
 const GlassCard: React.FC<GlassCardProps> = ({ 
   children, 
   className = '', 
-  glowColor = '#667eea',
+  glowColor = '#1a1a1a',
   intensity = 'medium',
   onClick
 }) => {

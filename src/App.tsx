@@ -17,6 +17,7 @@ import InsightsPage from './pages/InsightsPage';
 import BlogPost from './pages/BlogPost';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function App() {
             <Route path="/insights/:blogId" element={<BlogPost />} />
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

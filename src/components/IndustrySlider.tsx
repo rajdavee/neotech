@@ -19,108 +19,87 @@ interface IndustryData {
 
 const industries: IndustryData[] = [
   {
-    id: "healthtech",
-    name: "Healthtech",
-    description: "Transforming healthcare delivery with cutting-edge digital solutions, telemedicine platforms, AI-powered diagnostics, and advanced patient care systems.",
+    id: "healthcare",
+    name: "Healthcare",
+    description: "Critical systems for patient safety, doctor workflow, and hospital automation. HIPAA-compliant patient logistics and workflow automation.",
     features: [
-      "Telemedicine & Remote Patient Monitoring",
-      "AI-Powered Diagnostic Systems",
-      "Electronic Health Records (EHR)",
-      "Healthcare Analytics & Insights",
-      "Patient Engagement Platforms",
-      "Medical Device Integration"
+      "HIPAA-compliant Systems",
+      "Patient Safety Solutions",
+      "Doctor Workflow Automation",
+      "Hospital Administration",
+      "Multi-location Management",
+      "Real-time Patient Monitoring"
     ],
-    technologies: ["React", "Node.js", "Python", "AI/ML", "IoT", "HIPAA Compliance"],
+    technologies: ["React", "Python", "HIPAA Compliance", "Real-time Analytics", "Healthcare AI", "Workflow Automation"],
     icon: "🏥",
-    color: "#28a745",
+    color: "#1a1a1a",
     stats: {
-      projects: "150+",
-      clients: "75+",
-      experience: "8+ Years"
-    }
-  },
-  {
-    id: "fintech",
-    name: "Fintech",
-    description: "Revolutionizing financial services with secure, scalable solutions including digital banking, payment processing, blockchain applications, and financial analytics.",
-    features: [
-      "Digital Banking Platforms",
-      "Payment Gateway Solutions",
-      "Blockchain & Cryptocurrency",
-      "Risk Management Systems",
-      "Regulatory Compliance Tools",
-      "Financial Analytics & Reporting"
-    ],
-    technologies: ["React", "Java", "Python", "Blockchain", "AWS", "PCI DSS"],
-    icon: "💳",
-    color: "#007bff",
-    stats: {
-      projects: "200+",
-      clients: "120+",
+      projects: "50+",
+      clients: "25+",
       experience: "10+ Years"
     }
   },
   {
-    id: "ecommerce",
-    name: "E-Commerce",
-    description: "Building scalable e-commerce platforms with AI recommendations, omnichannel experiences, seamless payment integration, and advanced analytics.",
+    id: "saas-enterprise",
+    name: "SaaS & Enterprise Platforms",
+    description: "Scalable frameworks for RAG-powered systems, hardware integration and automation pipelines, and system optimisation.",
     features: [
-      "Multi-Channel E-commerce Platforms",
-      "AI-Powered Product Recommendations",
-      "Inventory Management Systems",
-      "Payment Gateway Integration",
-      "Mobile Commerce Solutions",
-      "Analytics & Business Intelligence"
+      "RAG-powered Systems",
+      "Hardware Integration",
+      "Automation Pipelines",
+      "System Optimisation",
+      "Enterprise-grade Architecture",
+      "Scalable Frameworks"
     ],
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS", "Shopify"],
-    icon: "🛒",
-    color: "#fd7e14",
+    technologies: ["React", "Node.js", "Python", "RAG", "Automation", "Enterprise Architecture"],
+    icon: "💼",
+    color: "#2c3e50",
     stats: {
-      projects: "300+",
-      clients: "200+",
+      projects: "200+",
+      clients: "120+",
       experience: "12+ Years"
     }
   },
   {
-    id: "gpu",
-    name: "GPU Computing",
-    description: "Accelerating high-performance computing with GPU power for AI/ML workloads, deep learning, computer vision, and graphics-intensive applications.",
+    id: "infrastructure-environmental",
+    name: "Infrastructure & Environmental Tech",
+    description: "Solutions to boost revenue, customer feedback, and marketing performance. Scalable infrastructure solutions.",
     features: [
-      "CUDA Development & Optimization",
-      "Machine Learning Acceleration",
-      "Computer Vision Applications",
-      "Deep Learning Workloads",
-      "Real-time Rendering Systems",
-      "Parallel Processing Optimization"
+      "Revenue Optimization",
+      "Customer Feedback Systems",
+      "Marketing Performance",
+      "Infrastructure Solutions",
+      "Environmental Tech",
+      "Scalable Systems"
     ],
-    technologies: ["CUDA", "OpenCL", "Python", "TensorFlow", "PyTorch", "C++"],
-    icon: "🚀",
-    color: "#6f42c1",
+    technologies: ["Python", "AWS", "Analytics", "Infrastructure", "Environmental Tech", "Cloud Solutions"],
+    icon: "🌱",
+    color: "#4a4a4a",
     stats: {
-      projects: "80+",
-      clients: "45+",
-      experience: "6+ Years"
+      projects: "150+",
+      clients: "80+",
+      experience: "8+ Years"
     }
   },
   {
-    id: "retail",
-    name: "Retail",
-    description: "Transforming retail experiences with omnichannel solutions, POS systems, inventory management, and customer engagement platforms.",
+    id: "ai-platforms-optimisation",
+    name: "AI Platforms & Optimisation",
+    description: "GPU optimisation solutions. Efficiently deploy 70B+ parameter models on limited GPU infrastructure with custom CUDA/AMD kernel-level optimisation.",
     features: [
-      "Omnichannel Retail Solutions",
-      "Point of Sale (POS) Systems",
-      "Inventory Management",
-      "Customer Relationship Management",
-      "Retail Analytics & Insights",
-      "Mobile Commerce Solutions"
+      "GPU Optimisation",
+      "LLM Deployment",
+      "CUDA Kernel Development",
+      "Performance Engineering",
+      "Cost Reduction",
+      "Energy Efficiency"
     ],
-    technologies: ["React", "Node.js", "Java", "MongoDB", "AWS", "Angular"],
-    icon: "🏪",
-    color: "#e83e8c",
+    technologies: ["CUDA", "PyTorch", "TensorRT", "ONNX", "Hugging Face", "LangChain", "Triton Inference Server"],
+    icon: "🚀",
+    color: "#555555",
     stats: {
-      projects: "250+",
-      clients: "180+",
-      experience: "11+ Years"
+      projects: "100+",
+      clients: "60+",
+      experience: "8+ Years"
     }
   }
 ];
@@ -160,8 +139,8 @@ const IndustrySlider: React.FC = () => {
     <section className="industry-slider-section">
       <div className="industry-slider-container">
         <div className="slider-header">
-          <h2>Our Industry Expertise</h2>
-          <p>Transforming businesses across diverse sectors with cutting-edge technology solutions</p>
+          <h2>Business Domains</h2>
+          <p>We serve diverse industries with targeted, data-driven solutions</p>
         </div>
 
         <div className="slider-wrapper">

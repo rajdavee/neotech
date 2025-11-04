@@ -6,58 +6,47 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
-          <div className="footer-section">
+          <div className="footer-section footer-logo-section">
             <div className="footer-logo">
               <h3>NEOTEQ</h3>
-              <p>Transforming businesses through innovative technology solutions.</p>
-            </div>
-            <div className="social-links">
-              <a href="#" aria-label="LinkedIn">💼</a>
-              <a href="#" aria-label="Twitter">🐦</a>
-              <a href="#" aria-label="Facebook">📘</a>
-              <a href="#" aria-label="GitHub">🐱</a>
+              <p className="footer-tagline">Powering Intelligence</p>
             </div>
           </div>
           
           <div className="footer-section">
-            <h4>Services</h4>
+            <h4>Navigation</h4>
             <ul>
-              <li><a href="#services">Digital Transformation</a></li>
-              <li><a href="#services">Product Engineering</a></li>
-              <li><a href="#services">AI & Machine Learning</a></li>
-              <li><a href="#services">Cloud Solutions</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
           
           <div className="footer-section">
-            <h4>Company</h4>
+            <h4>Social</h4>
             <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
+              <li><a href="#" aria-label="Facebook">Facebook</a></li>
+              <li><a href="#" aria-label="Instagram">Instagram</a></li>
+              <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
             </ul>
           </div>
           
           <div className="footer-section">
-            <h4>Contact Info</h4>
+            <h4>Contact</h4>
             <div className="contact-info">
-              <p>📧 hello@neoteq.com</p>
-              <p>📞 +1 (555) 123-4567</p>
-              <p>🏢 123 Innovation Street<br />Tech Hub, CA 94105</p>
+              <p><a href="mailto:info@neoteq.com">info@neoteq.com</a></p>
+              <p><a href="https://www.neoteq.com" target="_blank" rel="noopener noreferrer">www.neoteq.com</a></p>
+              <p>Gujarat, India</p>
             </div>
+            <p className="build-together">Let's Build Together</p>
+            <p className="build-together-subtitle">Let's shape the next generation of intelligent infrastructure.</p>
           </div>
         </div>
         
         <div className="footer-bottom">
           <div className="footer-divider"></div>
           <div className="footer-bottom-content">
-            <p>&copy; 2024 Neoteq. All rights reserved.</p>
-            <div className="footer-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Cookie Policy</a>
-            </div>
+            <p>&copy; 2025 by Neoteq. Created by Webworx.</p>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     message: ''
   });
@@ -19,7 +20,7 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
   };
 
   return (
@@ -27,7 +28,7 @@ const Contact: React.FC = () => {
       <div className="contact-container">
         <div className="contact-header">
           <h2>Let's Build Something Amazing Together</h2>
-          <p>Ready to transform your business? Get in touch with our experts today.</p>
+          <p>Ready to transform your business with cutting-edge technology? Get in touch with our expert team today to discuss your project needs.</p>
         </div>
         
         <div className="contact-content">
@@ -95,6 +96,16 @@ const Contact: React.FC = () => {
               
               <div className="form-group">
                 <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Your Mobile Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+              </div>
+              
+              <div className="form-group">
+                <input
                   type="text"
                   name="company"
                   placeholder="Company Name"
@@ -106,7 +117,7 @@ const Contact: React.FC = () => {
               <div className="form-group">
                 <textarea
                   name="message"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your project requirements and how we can help..."
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
