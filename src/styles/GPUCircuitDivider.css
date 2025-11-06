@@ -1,0 +1,149 @@
+.gpu-circuit-divider {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 80px 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gpu-circuit-divider.vertical {
+  width: 100px;
+  height: 100%;
+  margin: 0 40px;
+  transform: rotate(90deg);
+}
+
+.gpu-circuit-divider .circuit-svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.gpu-circuit-divider:hover .circuit-svg {
+  opacity: 1;
+}
+
+.gpu-circuit-divider .circuit-line {
+  stroke: var(--circuit-color, rgba(255, 255, 255, 0.3));
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));
+  transition: all 0.3s ease;
+}
+
+.gpu-circuit-divider .main-line {
+  stroke-width: 2;
+  stroke: var(--circuit-color, rgba(255, 255, 255, 0.4));
+}
+
+.gpu-circuit-divider .branch {
+  stroke-width: 1;
+  stroke: var(--circuit-color, rgba(255, 255, 255, 0.2));
+}
+
+.gpu-circuit-divider .circuit-node {
+  fill: var(--circuit-color, rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+  transition: all 0.3s ease;
+}
+
+.gpu-circuit-divider:hover .circuit-node {
+  fill: rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+.gpu-circuit-divider:hover .circuit-line {
+  stroke: rgba(255, 255, 255, 0.5);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+}
+
+.gpu-circuit-divider:hover .main-line {
+  stroke: rgba(255, 255, 255, 0.6);
+}
+
+.gpu-circuit-divider .pulse-dot {
+  fill: rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+  opacity: 0.8;
+}
+
+.gpu-circuit-divider .pulse-dot.pulse-delay {
+  animation-delay: 1.5s;
+  opacity: 0.5;
+}
+
+.gpu-circuit-divider.animated .circuit-line {
+  stroke-dasharray: 5, 5;
+  animation: circuitFlow 3s linear infinite;
+}
+
+.gpu-circuit-divider.animated .main-line {
+  stroke-dasharray: 8, 8;
+  animation: circuitFlow 2s linear infinite;
+}
+
+.gpu-circuit-divider.animated .branch {
+  stroke-dasharray: 3, 3;
+  animation: circuitFlow 4s linear infinite;
+}
+
+.gpu-circuit-divider.animated .circuit-node {
+  animation: nodePulse 2s ease-in-out infinite;
+}
+
+@keyframes nodePulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes circuitFlow {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 20;
+    opacity: 0.6;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gpu-circuit-divider {
+    height: 60px;
+    margin: 60px 0;
+  }
+  
+  .gpu-circuit-divider .circuit-line {
+    stroke-width: 1;
+  }
+  
+  .gpu-circuit-divider .main-line {
+    stroke-width: 1.5;
+  }
+  
+  .gpu-circuit-divider .circuit-node {
+    r: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .gpu-circuit-divider {
+    height: 40px;
+    margin: 40px 0;
+  }
+}
+

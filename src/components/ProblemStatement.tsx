@@ -53,6 +53,7 @@ const ProblemStatement: React.FC = () => {
         }, stepDuration);
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isVisible]);
 
   const problems = [

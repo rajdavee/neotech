@@ -1,402 +1,55 @@
-/* Home Page Styles */
+/* Home Page Styles with Enhanced Animations */
 .home {
-  padding-top: 70px; /* Account for fixed header */
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Parallax sections */
+.home .parallax-section {
+  position: relative;
+  z-index: 1;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 60px;
+/* Smooth transitions between sections */
+.home > * {
+  position: relative;
+  z-index: 1;
 }
 
-.section-header h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 16px;
+/* Background particle effects */
+.home .particle-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.section-header p {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+/* Enhanced scroll reveal animations */
+.home .scroll-reveal {
+  will-change: transform, opacity;
 }
 
-/* Stats Section */
-.stats-section {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  color: white;
-  padding: 80px 0;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  text-align: center;
-}
-
-.stat-item {
-  padding: 20px;
-}
-
-.stat-number {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
-
-.stat-label {
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* Services Overview */
-.services-overview {
-  padding: 100px 0;
-  background: #f8fafc;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  margin-bottom: 60px;
-}
-
-.service-card {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
+/* Section spacing with animation support */
+.home > section,
+.home > div > section {
   position: relative;
   overflow: hidden;
 }
 
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #2563eb, #1d4ed8);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+/* Performance optimizations */
+.home * {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-.service-card:hover::before {
-  transform: scaleX(1);
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-}
-
-.service-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 16px;
-}
-
-.service-card p {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.service-arrow {
-  font-size: 1.2rem;
-  color: #2563eb;
-  font-weight: 600;
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-arrow {
-  transform: translateX(5px);
-}
-
-/* Industries Overview */
-.industries-overview {
-  padding: 100px 0;
-  background: white;
-}
-
-.industries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-bottom: 60px;
-}
-
-.industry-card {
-  background: #f8fafc;
-  padding: 40px 30px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.industry-card:hover {
-  background: white;
-  border-color: #2563eb;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-.industry-icon {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.industry-card h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 12px;
-}
-
-.industry-card p {
-  color: #666;
-  line-height: 1.5;
-  font-size: 0.95rem;
-}
-
-/* Testimonials Section */
-.testimonials-section {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
-}
-
-.testimonial-card {
-  background: white;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
-  position: relative;
-}
-
-.testimonial-card::before {
-  content: '"';
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  font-size: 4rem;
-  color: #2563eb;
-  font-family: serif;
-  line-height: 1;
-}
-
-.testimonial-content {
-  margin-bottom: 30px;
-  padding-left: 40px;
-}
-
-.testimonial-content p {
-  font-style: italic;
-  color: #444;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-.testimonial-author {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.author-info h4 {
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 4px;
-}
-
-.author-info p {
-  color: #666;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.author-info .company {
-  font-weight: 500;
-  color: #2563eb;
-}
-
-.rating {
-  display: flex;
-  gap: 2px;
-}
-
-.star {
-  color: #fbbf24;
-  font-size: 1.2rem;
-}
-
-/* CTA Section */
-.cta-section {
-  padding: 120px 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2563eb 100%);
-  color: white;
-  text-align: center;
-}
-
-.cta-content h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.cta-content p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  opacity: 0.9;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.section-cta {
-  text-align: center;
-}
-
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 16px 32px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 1.05rem;
-}
-
-.cta-button.primary {
-  background: white;
-  color: #2563eb;
-}
-
-.cta-button.primary:hover {
-  background: #f1f5f9;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.cta-button.secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.cta-button.secondary:hover {
-  background: white;
-  color: #2563eb;
-  transform: translateY(-2px);
-}
-
-.cta-button:not(.primary):not(.secondary) {
-  background: #2563eb;
-  color: white;
-}
-
-.cta-button:not(.primary):not(.secondary):hover {
-  background: #1d4ed8;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .section-header h2 {
-    font-size: 2rem;
-  }
-
-  .stat-number {
-    font-size: 2.5rem;
-  }
-
-  .services-grid,
-  .industries-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card,
-  .industry-card {
-    padding: 30px 20px;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-content h2 {
-    font-size: 2.2rem;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cta-button {
-    min-width: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 15px;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .stat-item {
-    padding: 15px;
-  }
-
-  .section-header h2 {
-    font-size: 1.8rem;
-  }
-
-  .services-overview,
-  .industries-overview,
-  .testimonials-section {
-    padding: 60px 0;
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .home .parallax-section,
+  .home .scroll-reveal {
+    transform: none !important;
   }
 }

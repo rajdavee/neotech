@@ -1,5 +1,5 @@
 import React from 'react';
-import { LOGO_SVG_DATA, LOGO_SVG_DATA_VARIANT_2, LOGO_CONFIG } from '../assets/logoData';
+import { LOGO_SVG_DATA, LOGO_SVG_DATA_VARIANT_2 } from '../assets/logoData';
 import '../styles/Logo.css';
 
 interface LogoProps {

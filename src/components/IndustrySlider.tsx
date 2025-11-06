@@ -118,11 +118,6 @@ const IndustrySlider: React.FC = () => {
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
-  };
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % industries.length);
     setIsAutoPlaying(false);

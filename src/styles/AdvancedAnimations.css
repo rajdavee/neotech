@@ -1,0 +1,59 @@
+/* Particle Background Styles */
+.particle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+  box-shadow: 0 0 6px currentColor;
+}
+
+/* Ripple Effect Styles */
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Animated Counter Styles */
+.animated-counter {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* Text Reveal Styles */
+.text-reveal {
+  display: inline-block;
+}
+
+/* Magnetic Hover Styles */
+.magnetic-hover {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Performance optimizations */
+.particle,
+.ripple {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
