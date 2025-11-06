@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GlassCard from '../components/GlassCard';
 import NeonButton from '../components/NeonButton';
+import SEO from '../components/SEO';
 import '../styles/IndustriesPage.css';
 
 const IndustriesPage: React.FC = () => {
@@ -71,6 +72,13 @@ const IndustriesPage: React.FC = () => {
 
   return (
     <div className="industries-page">
+      <SEO
+        title="Industries - Technology Solutions by Industry"
+        description="NEOTEQ provides cutting-edge technology solutions across HealthTech, FinTech, E-Commerce, GPU Computing, Retail, and Education industries. Industry-specific expertise and tailored solutions."
+        keywords="healthtech solutions, fintech technology, e-commerce platforms, GPU computing, retail technology, education technology, industry-specific solutions, healthcare IT, financial technology"
+        url="https://www.neoteq.com/industries"
+      />
+      
       <div className="industries-container">
         <div className="industries-header">
           <h1 className="modern-title">

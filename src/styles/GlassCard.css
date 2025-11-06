@@ -1,17 +1,90 @@
-/* Glass Card Styles - Simplified to match reference site */
+/* Modern Glassmorphism Card Styles with Neon Borders */
 .glass-card {
   position: relative;
-  background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-default);
+  box-shadow: var(--shadow-glass);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all var(--transition-slow);
+  z-index: 1;
+  will-change: transform, box-shadow;
+}
+
+/* Neon Border Effect */
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius-lg);
+  padding: 2px;
+  background: var(--color-border-neon-gradient);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: 0;
+}
+
+.glass-card:hover::after {
+  opacity: 1;
+  box-shadow: var(--glow-dual);
+}
+
+/* Inner glow effect */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(0, 229, 255, 0.1) 0%,
+    rgba(0, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
 }
 
 .glass-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    var(--shadow-glass-hover),
+    var(--glow-dual);
+  border-color: var(--color-electric-blue);
+}
+
+.glass-card:active {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Smooth hover transition with glow intensity */
+.glass-card {
+  transition: 
+    transform var(--transition-medium) cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow var(--transition-medium) cubic-bezier(0.4, 0, 0.2, 1),
+    border-color var(--transition-medium) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover .glass-content {
+  transform: translateY(-2px);
+  transition: transform var(--transition-fast);
 }
 
 .glass-content {
@@ -20,25 +93,79 @@
   padding: 30px;
 }
 
-/* Intensity Variations - Simplified */
+/* Intensity Variations */
 .glass-low {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-medium {
-  background: #ffffff;
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .glass-high {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
 }
 
-/* Glow Effects - Removed complex effects */
-.glass-card.glow-blue,
-.glass-card.glow-purple,
-.glass-card.glow-green,
-.glass-card.glow-orange {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+/* Neon Border Variants */
+.glass-card.neon-electric::after {
+  background: linear-gradient(135deg, 
+    var(--color-electric-blue) 0%,
+    var(--color-electric-blue-dark) 50%,
+    var(--color-electric-blue) 100%);
+}
+
+.glass-card.neon-aqua::after {
+  background: linear-gradient(135deg, 
+    var(--color-neon-aqua) 0%,
+    var(--color-neon-aqua-dark) 50%,
+    var(--color-neon-aqua) 100%);
+}
+
+.glass-card.neon-dual::after {
+  background: var(--color-border-neon-gradient);
+}
+
+/* Neon Pulse Animation */
+.glass-card.neon-pulse:hover {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 
+      var(--shadow-glass-hover),
+      0 0 20px var(--color-electric-blue-glow),
+      0 0 40px var(--color-neon-aqua-glow);
+  }
+  50% {
+    box-shadow: 
+      var(--shadow-glass-hover),
+      0 0 30px var(--color-electric-blue-glow),
+      0 0 60px var(--color-neon-aqua-glow),
+      0 0 80px var(--color-electric-blue-glow);
+  }
+}
+
+.glass-reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, 
+    rgba(0, 229, 255, 0.1) 0%,
+    rgba(0, 255, 255, 0.05) 50%,
+    transparent 100%);
+  border-radius: var(--radius-lg) var(--radius-lg) 50% 50%;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 1;
 }
 
 /* Responsive Design */

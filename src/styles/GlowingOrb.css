@@ -1,0 +1,121 @@
+.glowing-orb {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  width: var(--orb-size);
+  height: var(--orb-size);
+  filter: blur(40px);
+}
+
+.orb-core {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.orb-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--orb-color), transparent);
+}
+
+.orb-glow-1 {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.orb-glow-2 {
+  width: 70%;
+  height: 70%;
+  opacity: 0.6;
+  animation: rotate 8s linear infinite;
+}
+
+.orb-glow-3 {
+  width: 50%;
+  height: 50%;
+  opacity: 0.4;
+  animation: rotate 12s linear infinite reverse;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.orb-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--orb-color), transparent);
+  opacity: 0.3;
+}
+
+.intensity-low {
+  filter: blur(30px);
+  opacity: 0.4;
+}
+
+.intensity-medium {
+  filter: blur(40px);
+  opacity: 0.6;
+}
+
+.intensity-high {
+  filter: blur(50px);
+  opacity: 0.8;
+}
+
+.position-top-left {
+  top: -10%;
+  left: -10%;
+}
+
+.position-top-right {
+  top: -10%;
+  right: -10%;
+}
+
+.position-bottom-left {
+  bottom: -10%;
+  left: -10%;
+}
+
+.position-bottom-right {
+  bottom: -10%;
+  right: -10%;
+}
+
+.position-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glowing-orb {
+    filter: blur(30px);
+  }
+  
+  .intensity-high {
+    filter: blur(35px);
+  }
+}
+
+
+
+

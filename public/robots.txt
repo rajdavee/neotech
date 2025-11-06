@@ -1,3 +1,25 @@
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow important pages
+Allow: /
+Allow: /services
+Allow: /industries
+Allow: /solutions
+Allow: /portfolio
+Allow: /about
+Allow: /insights
+Allow: /contact
+
+# Sitemap location
+Sitemap: https://www.neoteq.com/sitemap.xml
+
+# Crawl delay (optional, adjust as needed)
+Crawl-delay: 1

@@ -1,7 +1,7 @@
 /* Industry Slider Styles - Simplified to match reference site */
 .industry-slider-section {
   padding: 120px 0;
-  background: #ffffff;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
   position: relative;
   overflow: hidden;
 }
@@ -23,27 +23,42 @@
   font-family: 'Inter', sans-serif;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
+  position: relative;
+}
+
+.slider-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00E5FF, transparent);
+  border-radius: 2px;
 }
 
 .slider-header p {
   font-family: 'Inter', sans-serif;
   font-size: clamp(1.125rem, 2vw, 1.375rem);
-  color: #4a4a4a;
+  color: #cccccc;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.7;
   letter-spacing: 0;
+  margin-top: 30px;
 }
 
 .slider-wrapper {
   position: relative;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition: all 0.2s ease;
 }
@@ -68,7 +83,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, transparent, #e5e7eb 20%, #e5e7eb 80%, transparent);
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.2) 80%, transparent);
   transform: translateX(-50%);
   z-index: 0;
 }
@@ -93,7 +108,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 .industry-icon {
@@ -113,7 +128,7 @@
   font-family: 'Inter', sans-serif;
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
 }
@@ -121,7 +136,7 @@
 .industry-description {
   font-family: 'Inter', sans-serif;
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: #4a4a4a;
+  color: #cccccc;
   line-height: 1.7;
   margin-bottom: 30px;
 }
@@ -139,7 +154,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, transparent, #e5e7eb, transparent);
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   left: calc(33.333% - 15px);
 }
 
@@ -157,7 +172,7 @@
 .stat-item {
   text-align: center;
   padding: 20px;
-  background: #f8f9fa;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   transition: all 0.2s ease;
   flex: 1;
@@ -166,7 +181,7 @@
 }
 
 .stat-item:hover {
-  border-color: #1a1a1a;
+  border-color: rgba(0, 229, 255, 0.5);
   transform: translateY(-2px);
 }
 
@@ -175,14 +190,14 @@
   display: block;
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 700;
-  color: #1a1a1a;
+  color: #00E5FF;
   margin-bottom: 8px;
 }
 
 .stat-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
-  color: #4a4a4a;
+  color: #cccccc;
   font-weight: 500;
 }
 
@@ -205,7 +220,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 .features-section h4,
@@ -213,7 +228,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -231,7 +246,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, #1a1a1a, #e5e7eb);
+  background: linear-gradient(180deg, #00E5FF, rgba(255, 255, 255, 0.2));
   border-radius: 2px;
 }
 
@@ -240,7 +255,7 @@
   align-items: center;
   gap: 15px;
   padding: 15px;
-  background: #f8f9fa;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   transition: all 0.2s ease;
   margin-left: 15px;
@@ -248,9 +263,9 @@
 }
 
 .feature-item:hover {
-  border-left-color: #1a1a1a;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left-color: #00E5FF;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 229, 255, 0.2);
 }
 
 .feature-dot {
@@ -258,13 +273,13 @@
   height: 8px;
   border-radius: 50%;
   flex-shrink: 0;
-  background: #1a1a1a;
+  background: #00E5FF;
 }
 
 .feature-item span {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
-  color: #1a1a1a;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -277,13 +292,13 @@
 .tech-tag {
   font-family: 'Inter', sans-serif;
   padding: 8px 16px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
   font-size: 0.9rem;
-  color: #1a1a1a;
+  color: #ffffff;
   font-weight: 500;
   transition: all 0.2s ease;
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .learn-more-section {
@@ -295,16 +310,21 @@
   font-family: 'Inter', sans-serif;
   display: inline-block;
   padding: 14px 28px;
-  background: #1a1a1a;
-  color: white;
+  background: #00E5FF;
+  color: #0a0a0a;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
   font-size: 14px;
   transition: all 0.2s ease;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #00E5FF;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.learn-more-btn:hover {
+  background: transparent;
+  color: #00E5FF;
 }
 
 .slider-controls {
@@ -322,9 +342,10 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: white;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,7 +353,12 @@
   transition: all 0.2s ease;
   pointer-events: all;
   font-size: 1.5rem;
-  color: #1a1a1a;
+  color: #ffffff;
+}
+
+.control-btn:hover {
+  background: rgba(0, 229, 255, 0.2);
+  border-color: rgba(0, 229, 255, 0.5);
 }
 
 /* Responsive Design */

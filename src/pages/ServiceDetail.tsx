@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import GlassCard from '../components/GlassCard';
 import NeonButton from '../components/NeonButton';
+import SEO from '../components/SEO';
+import { generateServiceStructuredData } from '../utils/structuredData';
 import '../styles/ServiceDetail.css';
 
 const ServiceDetail: React.FC = () => {
@@ -529,9 +531,36 @@ const ServiceDetail: React.FC = () => {
 
   const service = serviceData[serviceId || ''];
 
+  const seoData = useMemo(() => {
+    if (!service) return null;
+    
+    const serviceName = service.name;
+    const serviceDescription = service.description;
+    const keywords = `${serviceName.toLowerCase()}, technology services, ${service.technologies?.join(', ').toLowerCase() || ''}, business solutions, enterprise software`;
+    
+    return {
+      title: `${serviceName} - Technology Services`,
+      description: `${serviceDescription} ${serviceName} services from NEOTEQ. Trusted by ${service.stats?.clients || 'hundreds'} of clients worldwide.`,
+      keywords,
+      structuredData: generateServiceStructuredData({
+        name: `${serviceName} - NEOTEQ`,
+        description: serviceDescription,
+        provider: 'NEOTEQ',
+        areaServed: 'Worldwide',
+        serviceType: `${serviceName} Services`,
+        url: `https://www.neoteq.com/services/${serviceId}`
+      })
+    };
+  }, [service, serviceId]);
+
   if (!service) {
     return (
       <div className="service-detail">
+        <SEO
+          title="Service Not Found"
+          description="The requested service page could not be found."
+          url="https://www.neoteq.com/services/not-found"
+        />
         <div className="service-container">
           <div className="error-section">
             <h1>Service Not Found</h1>
@@ -545,9 +574,18 @@ const ServiceDetail: React.FC = () => {
     );
   }
 
-  return (
-    <div className="service-detail">
-      <div className="service-container">
+    return (
+      <div className="service-detail">
+        {seoData && (
+          <SEO
+            title={seoData.title}
+            description={seoData.description}
+            keywords={seoData.keywords}
+            url={`https://www.neoteq.com/services/${serviceId}`}
+            structuredData={seoData.structuredData}
+          />
+        )}
+        <div className="service-container">
         {/* Back Button */}
         <button 
           className="back-button"

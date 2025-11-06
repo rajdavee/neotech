@@ -1,0 +1,148 @@
+.placeholder-page {
+  min-height: 80vh;
+  padding: 100px 0;
+  background: transparent;
+  position: relative;
+}
+
+.placeholder-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.placeholder-card {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.placeholder-icon {
+  font-size: 5rem;
+  opacity: 0.9;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.placeholder-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  background: linear-gradient(135deg, #00E5FF 0%, #00B4D8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.placeholder-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  color: #b0b8c0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.placeholder-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #b0b8c0;
+  margin: 0;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.placeholder-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.placeholder-links {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.placeholder-links h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.quick-links button {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.938rem;
+  color: #00E5FF;
+  background: transparent;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-links button:hover {
+  background: rgba(0, 229, 255, 0.1);
+  border-color: rgba(0, 229, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .placeholder-page {
+    padding: 60px 0;
+  }
+  
+  .placeholder-card {
+    padding: 40px 24px;
+  }
+  
+  .placeholder-icon {
+    font-size: 4rem;
+  }
+  
+  .placeholder-title {
+    font-size: 2rem;
+  }
+  
+  .placeholder-description {
+    font-size: 1.125rem;
+  }
+  
+  .placeholder-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .placeholder-actions button {
+    width: 100%;
+  }
+}
+

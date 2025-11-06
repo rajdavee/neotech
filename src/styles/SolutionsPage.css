@@ -1,7 +1,7 @@
-/* Solutions Page Styles - Simplified to match reference site */
+/* Solutions Page Styles - Dark Theme Matching Other Slides */
 .solutions-page {
-  padding: 120px 0;
-  background: #ffffff;
+  padding: 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
   position: relative;
   overflow: hidden;
   min-height: 100vh;

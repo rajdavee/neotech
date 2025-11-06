@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import GlassCard from '../components/GlassCard';
 import NeonButton from '../components/NeonButton';
+import SEO from '../components/SEO';
 import '../styles/IndustryDetail.css';
 
 const IndustryDetail: React.FC = () => {
@@ -409,9 +410,28 @@ const IndustryDetail: React.FC = () => {
 
   const industry = industryData[industryId || ''];
 
+  const seoData = useMemo(() => {
+    if (!industry) return null;
+    
+    const industryName = industry.name;
+    const industryDescription = industry.description;
+    const keywords = `${industryName.toLowerCase()}, ${industryName.toLowerCase()} solutions, technology solutions, industry-specific software, ${industry.solutions?.join(', ').toLowerCase() || ''}`;
+    
+    return {
+      title: `${industryName} Solutions - Technology Services`,
+      description: `${industryDescription} NEOTEQ provides tailored ${industryName} technology solutions. ${industry.solutions?.slice(0, 3).join(', ') || ''}.`,
+      keywords
+    };
+  }, [industry]);
+
   if (!industry) {
     return (
       <div className="industry-detail">
+        <SEO
+          title="Industry Not Found"
+          description="The requested industry page could not be found."
+          url="https://www.neoteq.com/industries/not-found"
+        />
         <div className="industry-container">
           <div className="error-section">
             <h1>Industry Not Found</h1>
@@ -427,6 +447,14 @@ const IndustryDetail: React.FC = () => {
 
   return (
     <div className="industry-detail">
+      {seoData && (
+        <SEO
+          title={seoData.title}
+          description={seoData.description}
+          keywords={seoData.keywords}
+          url={`https://www.neoteq.com/industries/${industryId}`}
+        />
+      )}
       <div className="industry-container">
         {/* Back Button */}
         <button 
