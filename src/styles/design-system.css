@@ -1,0 +1,126 @@
+/* Design System - Color Palette & Variables */
+
+:root {
+  /* Primary Color Palette */
+  --color-black: #000000;
+  --color-black-dark: #0a0a0a;
+  --color-black-light: #1a1a1a;
+  
+  /* Electric Blue - Vibrant electric blue */
+  --color-electric-blue: #00E5FF;
+  --color-electric-blue-dark: #00B8CC;
+  --color-electric-blue-light: #33EAFF;
+  --color-electric-blue-glow: rgba(0, 229, 255, 0.4);
+  
+  /* Neon Aqua - Bright aqua/cyan */
+  --color-neon-aqua: #00FFFF;
+  --color-neon-aqua-dark: #00CCCC;
+  --color-neon-aqua-light: #33FFFF;
+  --color-neon-aqua-glow: rgba(0, 255, 255, 0.4);
+  
+  /* Semantic Colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+  --color-text-tertiary: #cccccc;
+  
+  /* Background Colors */
+  --color-bg-primary: var(--color-black-dark);
+  --color-bg-secondary: var(--color-black-light);
+  --color-bg-glass: rgba(255, 255, 255, 0.05);
+  
+  /* Border Colors */
+  --color-border-default: rgba(255, 255, 255, 0.1);
+  --color-border-electric: var(--color-electric-blue);
+  --color-border-neon-aqua: var(--color-neon-aqua);
+  --color-border-neon-gradient: linear-gradient(
+    135deg,
+    var(--color-electric-blue) 0%,
+    var(--color-neon-aqua) 50%,
+    var(--color-electric-blue) 100%
+  );
+  
+  /* Glow Effects */
+  --glow-electric-blue: 0 0 20px var(--color-electric-blue-glow),
+                         0 0 40px var(--color-electric-blue-glow),
+                         0 0 60px var(--color-electric-blue-glow);
+  --glow-neon-aqua: 0 0 20px var(--color-neon-aqua-glow),
+                    0 0 40px var(--color-neon-aqua-glow),
+                    0 0 60px var(--color-neon-aqua-glow);
+  --glow-dual: 0 0 20px var(--color-electric-blue-glow),
+               0 0 40px var(--color-neon-aqua-glow),
+               0 0 60px var(--color-electric-blue-glow);
+  
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-button: 'Manrope', sans-serif;
+  
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  
+  /* Shadows */
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3),
+                   inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --shadow-glass-hover: 0 20px 60px rgba(0, 0, 0, 0.4),
+                         0 0 0 1px rgba(255, 255, 255, 0.1);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utility Classes for Color Palette */
+.color-electric-blue {
+  color: var(--color-electric-blue);
+}
+
+.color-neon-aqua {
+  color: var(--color-neon-aqua);
+}
+
+.bg-electric-blue {
+  background-color: var(--color-electric-blue);
+}
+
+.bg-neon-aqua {
+  background-color: var(--color-neon-aqua);
+}
+
+.border-electric-blue {
+  border-color: var(--color-electric-blue);
+}
+
+.border-neon-aqua {
+  border-color: var(--color-neon-aqua);
+}
+
+.glow-electric-blue {
+  box-shadow: var(--glow-electric-blue);
+}
+
+.glow-neon-aqua {
+  box-shadow: var(--glow-neon-aqua);
+}
+
+.glow-dual {
+  box-shadow: var(--glow-dual);
+}
+
+
+
+
+
+

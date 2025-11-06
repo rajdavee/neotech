@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import GlassCard from '../components/GlassCard';
 import NeonButton from '../components/NeonButton';
+import SEO from '../components/SEO';
 import '../styles/SolutionDetail.css';
 
 const SolutionDetail: React.FC = () => {
@@ -277,9 +278,28 @@ const SolutionDetail: React.FC = () => {
 
   const solution = solutionData[solutionId || ''];
 
+  const seoData = useMemo(() => {
+    if (!solution) return null;
+    
+    const solutionName = solution.name;
+    const solutionDescription = solution.description;
+    const keywords = `${solutionName.toLowerCase()}, enterprise software, ${solution.features?.join(', ').toLowerCase() || ''}, business solutions, ${solutionName.toLowerCase()} platform`;
+    
+    return {
+      title: `${solutionName} - Enterprise Software Solutions`,
+      description: `${solutionDescription} ${solutionName} solutions from NEOTEQ. Features include ${solution.features?.slice(0, 3).join(', ') || ''}.`,
+      keywords
+    };
+  }, [solution]);
+
   if (!solution) {
     return (
       <div className="solution-detail">
+        <SEO
+          title="Solution Not Found"
+          description="The requested solution page could not be found."
+          url="https://www.neoteq.com/solutions/not-found"
+        />
         <div className="solution-container">
           <div className="error-section">
             <h1>Solution Not Found</h1>
@@ -293,9 +313,17 @@ const SolutionDetail: React.FC = () => {
     );
   }
 
-  return (
-    <div className="solution-detail">
-      <div className="solution-container">
+    return (
+      <div className="solution-detail">
+        {seoData && (
+          <SEO
+            title={seoData.title}
+            description={seoData.description}
+            keywords={seoData.keywords}
+            url={`https://www.neoteq.com/solutions/${solutionId}`}
+          />
+        )}
+        <div className="solution-container">
         {/* Back Button */}
         <button 
           className="back-button"

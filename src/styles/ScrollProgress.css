@@ -1,0 +1,155 @@
+/* Scroll Progress Indicator */
+.scroll-progress-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00E5FF, #00B4D8, #0096C7);
+  z-index: 10000;
+  transform-origin: left;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+/* Cursor Glow Effect */
+.cursor-glow {
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Enhanced Header Animations */
+.header.scrolled {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header .nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.header .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00E5FF, #00B4D8);
+  transition: width 0.3s ease;
+}
+
+.header .nav-link:hover::after,
+.header .nav-link.active::after {
+  width: 100%;
+}
+
+.header .dropdown-menu {
+  overflow: hidden;
+}
+
+.header .dropdown-item {
+  transition: all 0.2s ease;
+}
+
+.header .dropdown-item:hover {
+  transform: translateX(5px);
+  background: rgba(0, 229, 255, 0.1);
+}
+
+/* Solutions Page Animations */
+.solution-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.solution-card.selected {
+  transform: scale(1.02);
+  box-shadow: 0 10px 40px rgba(0, 229, 255, 0.3);
+}
+
+.solution-details {
+  overflow: hidden;
+}
+
+.solution-features ul li,
+.solution-benefits ul li {
+  transition: all 0.2s ease;
+}
+
+.solution-features ul li:hover,
+.solution-benefits ul li:hover {
+  transform: translateX(5px);
+  color: var(--color-text-primary);
+}
+
+/* Hero Text Reveal */
+.hero-title-line {
+  display: inline-block;
+}
+
+.hero-title .highlight {
+  display: inline-block;
+}
+
+/* Footer Enhancements */
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.5), transparent);
+}
+
+.footer-section h4 {
+  transition: color 0.3s ease;
+}
+
+.footer-section h4:hover {
+  color: #00E5FF;
+}
+
+.footer-section a {
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-section a:hover {
+  transform: translateX(5px);
+  color: #00E5FF;
+}
+
+.social-icon-link {
+  transition: all 0.3s ease;
+}
+
+.social-icon-link:hover {
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.6));
+}
+
+/* Performance optimizations */
+.scroll-progress-indicator,
+.cursor-glow {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress-indicator,
+  .cursor-glow,
+  .header .nav-link::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+

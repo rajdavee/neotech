@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import GlassCard from './GlassCard';
 import NeonButton from './NeonButton';
 import '../styles/RequestDemo.css';
 
 const RequestDemo: React.FC = () => {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',

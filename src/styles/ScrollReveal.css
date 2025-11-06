@@ -1,0 +1,12 @@
+.scroll-reveal {
+  width: 100%;
+}
+
+/* Optional: Add will-change for better performance */
+.scroll-reveal {
+  will-change: transform, opacity;
+}
+
+
+
+

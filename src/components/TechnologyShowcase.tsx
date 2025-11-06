@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/TechnologyShowcase.css';
 
 interface Technology {
@@ -145,8 +145,8 @@ const TechnologyShowcase: React.FC = () => {
     <section className="technology-showcase">
       <div className="tech-container">
         <div className="tech-header">
-          <h2>Capability Matrix</h2>
-          <p>We enable AI-driven transformation across every layer of technology</p>
+          <h2>Technology Stack</h2>
+          <p>12 leading frameworks and tools powering our solutions</p>
         </div>
 
         <div className="tech-categories">

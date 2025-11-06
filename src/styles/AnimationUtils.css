@@ -1,0 +1,48 @@
+/* Enhanced Animation Utilities */
+
+.parallax-section {
+  will-change: transform;
+}
+
+.stagger-container {
+  width: 100%;
+}
+
+.stagger-item {
+  width: 100%;
+}
+
+.magnetic-element {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-animation {
+  will-change: transform;
+}
+
+.pulse-glow {
+  will-change: box-shadow;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced hover effects */
+a, button, .clickable {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

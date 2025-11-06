@@ -1,0 +1,246 @@
+.ai-first-approach {
+  padding: 100px 0;
+  background: transparent;
+  position: relative;
+}
+
+.ai-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.ai-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.process-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+}
+
+.step-card {
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+}
+
+.step-number {
+  font-family: 'Inter', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  line-height: 1;
+}
+
+.step-icon-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover .step-icon-wrapper {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.step-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.step-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.step-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.938rem;
+  color: #b0b8c0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.step-connector {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.ai-outcome {
+  margin-top: 60px;
+}
+
+.outcome-card {
+  padding: 50px;
+  text-align: center;
+}
+
+.outcome-content h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.outcome-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.metric-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00E5FF 0%, #00B4D8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.metric-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #b0b8c0;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .ai-container {
+    padding: 0 24px;
+  }
+  
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .step-connector {
+    display: none;
+  }
+  
+  .outcome-metrics {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 968px) {
+  .ai-first-approach {
+    padding: 80px 0;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .step-card {
+    padding: 30px 24px;
+  }
+  
+  .outcome-card {
+    padding: 40px 30px;
+  }
+  
+  .outcome-metrics {
+    gap: 40px;
+  }
+  
+  .metric-value {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-first-approach {
+    padding: 60px 0;
+  }
+  
+  .ai-container {
+    padding: 0 20px;
+  }
+  
+  .ai-header {
+    margin-bottom: 50px;
+  }
+  
+  .step-card {
+    padding: 24px 20px;
+  }
+  
+  .step-icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  
+  .outcome-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .outcome-metrics {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
